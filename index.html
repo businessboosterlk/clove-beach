@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<title>Clove Beach Wadduwa · A Sanctuary by the Ocean</title>
+<meta name="description" content="Clove Beach, Wadduwa. A private beachfront sanctuary of quiet luxury in Sri Lanka. Ocean and garden villas, spa, all-day dining, weddings and honeymoons.">
+<meta name="theme-color" content="#0f3b36">
+<link rel="icon" type="image/png" href="assets/mark.png">
+<meta property="og:title" content="Clove Beach Wadduwa · A Sanctuary by the Ocean">
+<meta property="og:description" content="A private beachfront sanctuary of quiet luxury in Sri Lanka.">
+<meta property="og:image" content="assets/aerial.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#211f1a; --ink-2:#57524a; --ink-3:#8a8377;
+  --bg:#f7f2e9; --cream:#fcf9f2; --surface:#fffdf8;
+  --deep:#0f3b36; --deep-2:#0a2b28; --deep-soft:#164a44;
+  --gold:#b0894e; --gold-2:#c8a163; --gold-soft:#e7d8bd;
+  --sand:#eaddc7; --line:rgba(33,31,26,.13); --line-cream:rgba(255,255,255,.16);
+  --r:2px; --maxw:1280px; --nav:78px;
+  --disp:'Playfair Display',Georgia,serif;
+  --sans:'Jost',-apple-system,system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{overflow-x:clip;max-width:100%}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--bg);line-height:1.6;font-weight:400;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,select{font-family:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px}
+h1,h2,h3,h4{font-family:var(--disp);font-weight:500;line-height:1.12;letter-spacing:.005em}
+.serif-i{font-style:italic}
+.eyebrow{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);opacity:.7}
+.eyebrow.center::after{content:"";width:34px;height:1px;background:var(--gold);opacity:.7}
+.eyebrow.center{justify-content:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:11px;font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.2em;text-transform:uppercase;padding:16px 30px;border:1px solid var(--gold);color:var(--ink);background:transparent;transition:.4s var(--ease);position:relative;overflow:hidden}
+.btn span{position:relative;z-index:2;transition:color .4s var(--ease)}
+.btn::after{content:"";position:absolute;inset:0;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .45s var(--ease);z-index:1}
+.btn:hover::after{transform:scaleX(1)}
+.btn:hover span{color:#fff}
+.btn-solid{background:var(--gold);color:#fff;border-color:var(--gold)}
+.btn-solid::after{background:var(--deep)}
+.btn-light{border-color:rgba(255,255,255,.5);color:#fff}
+.btn-light::after{background:#fff}
+.btn-light:hover span{color:var(--deep)}
+.btn svg{position:relative;z-index:2;width:15px;height:15px}
+
+/* ===== SCROLL PROGRESS ===== */
+.progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-2));width:0;z-index:600;transition:width .1s linear}
+
+/* ===== TOP BAR ===== */
+.topbar{background:var(--deep);color:rgba(255,255,255,.72);font-size:12px;letter-spacing:.06em;font-weight:300}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:38px}
+.topbar a{transition:.2s}.topbar a:hover{color:var(--gold-2)}
+.topbar .l{display:flex;gap:26px}
+.topbar .r{display:flex;gap:22px;align-items:center}
+.topbar .dot{width:4px;height:4px;border-radius:50%;background:var(--gold);display:inline-block}
+
+/* ===== HEADER ===== */
+.header{position:fixed;top:0;left:0;right:0;z-index:500;transition:background .5s var(--ease),box-shadow .5s,transform .5s var(--ease);transform:translateY(38px)}
+.header.stick{transform:translateY(0);background:rgba(247,242,233,.92);backdrop-filter:saturate(150%) blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav{height:var(--nav);display:flex;align-items:center;gap:30px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand img{height:44px;width:auto;filter:brightness(0) invert(1);transition:filter .5s}
+.header.stick .brand img{filter:none}
+.nav-links{display:flex;gap:30px;margin:0 auto}
+.nav-links a{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;font-weight:400;color:rgba(255,255,255,.9);position:relative;padding:6px 0;transition:color .4s}
+.header.stick .nav-links a{color:var(--ink-2)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .35s var(--ease)}
+.nav-links a:hover{color:var(--gold)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;color:#fff;border:1px solid rgba(255,255,255,.5);padding:12px 22px;transition:.4s var(--ease)}
+.header.stick .nav-cta{color:var(--ink);border-color:var(--gold)}
+.nav-cta:hover{background:var(--gold);border-color:var(--gold);color:#fff}
+.hamb{display:none;width:44px;height:44px;place-items:center;color:#fff}
+.header.stick .hamb{color:var(--ink)}
+.hamb svg{width:26px;height:26px}
+
+/* ===== HERO ===== */
+.hero{position:relative;height:100vh;min-height:660px;overflow:hidden;display:flex;align-items:center;color:#fff}
+.hero-bg{position:absolute;inset:-8% 0 -8% 0;z-index:1;will-change:transform}
+.hero-bg img{width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(180deg,rgba(10,30,28,.5) 0%,rgba(10,30,28,.18) 34%,rgba(10,30,28,.42) 78%,rgba(10,30,28,.68) 100%)}
+.hero-in{position:relative;z-index:3;width:100%;text-align:center}
+.hero .eyebrow{color:#e7d8bd}
+.hero .eyebrow::before,.hero .eyebrow::after{background:var(--gold-2)}
+.hero h1{font-size:clamp(44px,7.4vw,104px);font-weight:400;line-height:1.02;margin:26px 0 0;letter-spacing:.01em}
+.hero h1 em{font-style:italic;color:var(--gold-2)}
+.hero-sub{font-weight:300;font-size:clamp(15px,1.7vw,19px);letter-spacing:.04em;max-width:560px;margin:26px auto 0;color:rgba(255,255,255,.9)}
+.hero-cta{display:flex;gap:16px;justify-content:center;margin-top:40px;flex-wrap:wrap}
+.scrollcue{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.7);font-size:11px;letter-spacing:.25em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:12px}
+.scrollcue .ln{width:1px;height:46px;background:linear-gradient(180deg,var(--gold-2),transparent);position:relative;overflow:hidden}
+.scrollcue .ln::after{content:"";position:absolute;top:-46px;left:0;width:1px;height:46px;background:#fff;animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{top:-46px}60%,100%{top:46px}}
+
+/* ===== RESERVATION BAR ===== */
+.resv{position:relative;z-index:20;margin-top:-46px}
+.resv-in{background:var(--surface);box-shadow:0 30px 70px rgba(15,59,54,.16);border:1px solid var(--line);display:grid;grid-template-columns:1fr 1fr .8fr 1.1fr auto;align-items:stretch}
+.resv-f{padding:20px 26px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:5px;justify-content:center}
+.resv-f label{font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500}
+.resv-f input,.resv-f select{border:none;background:transparent;font-size:15px;font-weight:400;color:var(--ink);outline:none;font-family:var(--sans);width:100%}
+.resv-f input::-webkit-calendar-picker-indicator{opacity:.5}
+.resv-btn{background:var(--deep);color:#fff;padding:0 36px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;display:flex;align-items:center;justify-content:center;gap:10px;transition:.4s var(--ease)}
+.resv-btn:hover{background:var(--gold)}
+.resv-btn svg{width:16px;height:16px}
+
+/* ===== SECTIONS ===== */
+.sect{padding:120px 0}
+.sect-head{text-align:center;max-width:660px;margin:0 auto 64px}
+.sect-head h2{font-size:clamp(32px,4.4vw,52px);margin:20px 0 0}
+.sect-head p{color:var(--ink-2);font-weight:300;font-size:17px;margin-top:20px;line-height:1.7}
+
+/* intro split */
+.intro{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:center}
+.intro-media{position:relative}
+.intro-media .im{overflow:hidden}
+.intro-media img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.4s var(--ease)}
+.intro-media .badge{position:absolute;right:-30px;bottom:40px;background:var(--deep);color:#fff;padding:26px 30px;text-align:center;box-shadow:0 24px 50px rgba(10,30,28,.3)}
+.intro-media .badge .n{font-family:var(--disp);font-size:40px;line-height:1;color:var(--gold-2)}
+.intro-media .badge .t{font-size:11px;letter-spacing:.2em;text-transform:uppercase;margin-top:8px;color:rgba(255,255,255,.8)}
+.intro-text h2{font-size:clamp(30px,3.8vw,46px);margin:22px 0 24px}
+.intro-text p{color:var(--ink-2);font-weight:300;font-size:16.5px;line-height:1.8;margin-bottom:20px;max-width:520px}
+.intro-feats{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.intro-feats span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);border:1px solid var(--line);padding:10px 16px}
+
+/* villas */
+.villas{background:var(--cream)}
+.villa{display:grid;grid-template-columns:1.15fr 1fr;gap:0;align-items:stretch;margin-bottom:0}
+.villa:nth-child(even) .villa-media{order:2}
+.villa-media{overflow:hidden;min-height:520px;position:relative}
+.villa-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.villa:hover .villa-media img{transform:scale(1.06)}
+.villa-media .idx{position:absolute;top:26px;left:28px;font-family:var(--disp);font-size:15px;letter-spacing:.3em;color:rgba(255,255,255,.85);z-index:2}
+.villa-body{background:var(--surface);padding:66px 64px;display:flex;flex-direction:column;justify-content:center;border:1px solid var(--line)}
+.villa-body .eyebrow{margin-bottom:16px}
+.villa-body h3{font-size:clamp(28px,3.4vw,40px)}
+.villa-body p{color:var(--ink-2);font-weight:300;line-height:1.8;margin:18px 0 24px;max-width:460px}
+.villa-amen{display:flex;flex-wrap:wrap;gap:9px 22px;margin-bottom:34px}
+.villa-amen li{list-style:none;font-size:13px;color:var(--ink-2);display:flex;align-items:center;gap:9px}
+.villa-amen svg{width:15px;height:15px;color:var(--gold)}
+.villa-foot{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.villa-price{font-family:var(--disp);font-size:15px;color:var(--ink-2)}
+.villa-price b{color:var(--ink);font-size:26px;font-weight:500}
+
+/* experiences band (dark) */
+.dark{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.dark .sect-head p{color:rgba(255,255,255,.72)}
+.dark .eyebrow{color:var(--gold-2)}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.exp{position:relative;overflow:hidden;aspect-ratio:3/4;display:flex;align-items:flex-end}
+.exp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.exp::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(10,30,28,.85))}
+.exp:hover img{transform:scale(1.07)}
+.exp-b{position:relative;z-index:2;padding:30px}
+.exp-b .no{font-family:var(--disp);color:var(--gold-2);font-size:14px;letter-spacing:.2em}
+.exp-b h4{font-size:23px;margin:8px 0 8px;color:#fff}
+.exp-b p{font-size:13.5px;color:rgba(255,255,255,.76);font-weight:300;line-height:1.6}
+
+/* facilities parallax band */
+.para{position:relative;min-height:520px;display:flex;align-items:center;color:#fff;overflow:hidden}
+.para-bg{position:absolute;inset:-12% 0;z-index:1;will-change:transform}
+.para-bg img{width:100%;height:100%;object-fit:cover}
+.para::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(10,30,28,.82),rgba(10,30,28,.4))}
+.para-in{position:relative;z-index:3;max-width:560px}
+.para-in .eyebrow{color:var(--gold-2)}
+.para-in h2{font-size:clamp(32px,4.2vw,50px);margin:20px 0 22px}
+.para-in p{color:rgba(255,255,255,.85);font-weight:300;line-height:1.8;margin-bottom:30px}
+.fac-list{display:grid;grid-template-columns:1fr 1fr;gap:16px 30px}
+.fac-list li{list-style:none;display:flex;align-items:center;gap:13px;font-size:14.5px;letter-spacing:.02em;color:rgba(255,255,255,.92)}
+.fac-list svg{width:19px;height:19px;color:var(--gold-2);flex-shrink:0}
+
+/* weddings split */
+.wed{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.wed-media{overflow:hidden;min-height:560px}
+.wed-media img{width:100%;height:100%;object-fit:cover;transition:transform 1.6s var(--ease)}
+.wed:hover .wed-media img{transform:scale(1.05)}
+.wed-body{background:var(--deep);color:#fff;padding:90px 70px;display:flex;flex-direction:column;justify-content:center}
+.wed-body .eyebrow{color:var(--gold-2)}
+.wed-body h2{font-size:clamp(30px,3.6vw,46px);margin:20px 0 22px}
+.wed-body p{color:rgba(255,255,255,.8);font-weight:300;line-height:1.8;margin-bottom:28px;max-width:460px}
+
+/* planner (smart feature) */
+.planner{background:linear-gradient(180deg,var(--cream),var(--bg))}
+.planner-card{background:var(--surface);border:1px solid var(--line);box-shadow:0 40px 90px rgba(15,59,54,.1);display:grid;grid-template-columns:1fr 1fr}
+.planner-l{padding:56px 56px}
+.planner-l .eyebrow{margin-bottom:16px}
+.planner-l h2{font-size:clamp(28px,3.4vw,42px);margin-bottom:14px}
+.planner-l>p{color:var(--ink-2);font-weight:300;line-height:1.7;margin-bottom:30px;max-width:420px}
+.p-step{margin-bottom:24px}
+.p-step .pl{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:12px}
+.p-opts{display:flex;flex-wrap:wrap;gap:9px}
+.p-chip{border:1px solid var(--line);padding:11px 18px;font-size:13px;letter-spacing:.04em;color:var(--ink);transition:.3s var(--ease);background:transparent}
+.p-chip:hover{border-color:var(--gold)}
+.p-chip.sel{background:var(--deep);border-color:var(--deep);color:#fff}
+.p-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.p-field label{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:8px}
+.p-field input,.p-field select{width:100%;border:1px solid var(--line);background:var(--cream);padding:12px 14px;font-size:14px;color:var(--ink);outline:none;transition:.2s}
+.p-field input:focus,.p-field select:focus{border-color:var(--gold)}
+.planner-r{position:relative;background:var(--deep);color:#fff;padding:56px 50px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.planner-r::before{content:"";position:absolute;inset:0;background:url('assets/arrival.jpg') center/cover;opacity:.16}
+.planner-r>*{position:relative;z-index:2}
+.pr-empty{text-align:center;color:rgba(255,255,255,.7)}
+.pr-empty .mk{width:66px;height:66px;margin:0 auto 20px;opacity:.5}
+.pr-empty p{font-weight:300;font-size:15px;max-width:280px;margin:0 auto}
+.pr-head .eyebrow{color:var(--gold-2)}
+.pr-head h3{font-size:30px;margin:14px 0 6px}
+.pr-head .sub{color:rgba(255,255,255,.72);font-size:14px;font-weight:300;margin-bottom:26px}
+.pr-incl{list-style:none;margin-bottom:30px}
+.pr-incl li{display:flex;gap:13px;align-items:flex-start;padding:11px 0;border-top:1px solid var(--line-cream);font-size:14px;font-weight:300;color:rgba(255,255,255,.9)}
+.pr-incl svg{width:17px;height:17px;color:var(--gold-2);flex-shrink:0;margin-top:2px}
+.pr-note{font-size:12px;color:rgba(255,255,255,.6);text-align:center;margin-top:16px;font-weight:300}
+
+/* gallery */
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+.gal-item{overflow:hidden;position:relative;cursor:pointer}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.gal-item::after{content:"";position:absolute;inset:0;background:rgba(10,30,28,0);transition:.4s}
+.gal-item:hover img{transform:scale(1.08)}
+.gal-item:hover::after{background:rgba(10,30,28,.28)}
+.gal-item .zoom{position:absolute;inset:0;display:grid;place-items:center;color:#fff;opacity:0;transition:.4s;z-index:2}
+.gal-item:hover .zoom{opacity:1}
+.gal-item .zoom svg{width:30px;height:30px}
+.g-tall{grid-row:span 2}.g-wide{grid-column:span 2}
+
+/* location */
+.loc{background:var(--deep);color:#fff}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.loc-info .eyebrow{color:var(--gold-2)}
+.loc-info h2{font-size:clamp(30px,3.6vw,46px);margin:20px 0 22px}
+.loc-info p{color:rgba(255,255,255,.8);font-weight:300;line-height:1.8;margin-bottom:26px;max-width:460px}
+.loc-rows{margin-bottom:32px}
+.loc-rows .lr{display:flex;gap:16px;padding:16px 0;border-top:1px solid var(--line-cream)}
+.loc-rows svg{width:20px;height:20px;color:var(--gold-2);flex-shrink:0;margin-top:2px}
+.loc-rows b{display:block;font-family:var(--disp);font-size:16px;margin-bottom:3px}
+.loc-rows span{color:rgba(255,255,255,.68);font-size:13.5px;font-weight:300}
+.loc-map{overflow:hidden;border:1px solid var(--line-cream);min-height:420px}
+.loc-map iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.3) contrast(1.05)}
+
+/* reserve cta */
+.cta{position:relative;text-align:center;color:#fff;padding:150px 0;overflow:hidden}
+.cta-bg{position:absolute;inset:-10% 0;z-index:1;will-change:transform}
+.cta-bg img{width:100%;height:100%;object-fit:cover}
+.cta::after{content:"";position:absolute;inset:0;z-index:2;background:rgba(10,30,28,.62)}
+.cta-in{position:relative;z-index:3}
+.cta-in h2{font-size:clamp(34px,5vw,64px);margin:22px 0 24px}
+.cta-in p{font-weight:300;font-size:17px;color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 38px}
+.cta-in .hero-cta{margin-top:0}
+
+/* footer */
+footer{background:var(--deep-2);color:rgba(255,255,255,.6);padding:80px 0 34px}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:50px}
+.foot-brand img{height:52px;filter:brightness(0) invert(1);margin-bottom:22px}
+.foot-brand p{font-weight:300;line-height:1.8;font-size:14px;max-width:280px}
+.foot-soc{display:flex;gap:12px;margin-top:24px}
+.foot-soc a{width:40px;height:40px;border:1px solid var(--line-cream);display:grid;place-items:center;color:#fff;transition:.3s}
+.foot-soc a:hover{background:var(--gold);border-color:var(--gold)}
+.foot-soc svg{width:17px;height:17px}
+.foot-col h4{font-family:var(--disp);color:#fff;font-size:17px;margin-bottom:20px;font-weight:500}
+.foot-col a,.foot-col div{display:block;font-size:14px;font-weight:300;margin-bottom:13px;transition:.2s}
+.foot-col a:hover{color:var(--gold-2)}
+.foot-contact div{display:flex;gap:11px;font-size:14px;font-weight:300;margin-bottom:14px}
+.foot-contact svg{width:16px;height:16px;color:var(--gold-2);flex-shrink:0;margin-top:3px}
+.foot-bot{border-top:1px solid var(--line-cream);margin-top:56px;padding-top:26px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px;font-weight:300}
+
+/* WhatsApp fab */
+.wa-fab{position:fixed;right:24px;bottom:24px;z-index:140;width:56px;height:56px;border-radius:50%;background:#1aae54;box-shadow:0 10px 30px rgba(26,174,84,.4);display:grid;place-items:center;transition:.25s}
+.wa-fab:hover{transform:scale(1.08)}
+.wa-fab svg{width:29px;height:29px;color:#fff}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:700;background:rgba(8,24,22,.94);display:grid;place-items:center;opacity:0;visibility:hidden;transition:.35s;padding:40px}
+.lb.open{opacity:1;visibility:visible}
+.lb img{max-width:90vw;max-height:86vh;object-fit:contain;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb .x,.lb .nav-b{position:absolute;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;transition:.25s}
+.lb .x:hover,.lb .nav-b:hover{background:var(--gold);border-color:var(--gold)}
+.lb .x{top:28px;right:28px}.lb .x svg{width:22px;height:22px}
+.lb .prev{left:28px;top:50%;transform:translateY(-50%)}.lb .next{right:28px;top:50%;transform:translateY(-50%)}
+.lb .nav-b svg{width:22px;height:22px}
+
+/* mobile drawer */
+.mscrim{position:fixed;inset:0;background:rgba(10,30,28,.5);backdrop-filter:blur(3px);z-index:540;opacity:0;visibility:hidden;transition:.3s}
+.mscrim.open{opacity:1;visibility:visible}
+.mmenu{position:fixed;top:0;right:0;height:100%;width:320px;max-width:88vw;background:var(--deep);z-index:550;padding:34px 34px;opacity:0;visibility:hidden;transform:translateX(-16px);transition:transform .4s var(--ease),opacity .3s,visibility .3s;pointer-events:none}
+.mmenu.open{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.mmenu .mx{position:absolute;top:24px;right:24px;color:#fff;width:40px;height:40px;display:grid;place-items:center}
+.mmenu .mx svg{width:24px;height:24px}
+.mmenu img{height:44px;filter:brightness(0) invert(1);margin-bottom:40px}
+.mmenu a{display:block;font-family:var(--disp);font-size:24px;color:#fff;padding:13px 0;border-bottom:1px solid var(--line-cream);transition:.2s}
+.mmenu a:hover{color:var(--gold-2);padding-left:8px}
+.mmenu .btn{margin-top:28px;width:100%}
+
+/* reveal (gated) */
+.reveal-on [data-rv]{opacity:0;transform:translateY(38px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.reveal-on [data-rv].in{opacity:1;transform:none}
+.reveal-on [data-rv="fade"]{transform:none}
+.reveal-on [data-rv].in[style]{transition-delay:inherit}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.05ms!important}.hero-bg,.para-bg,.cta-bg{transform:none!important}}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1024px){
+  .wrap{padding:0 28px}
+  .nav-links{display:none}
+  .hamb{display:grid}
+  .intro{grid-template-columns:1fr;gap:44px}
+  .intro-media .badge{right:20px}
+  .villa,.wed{grid-template-columns:1fr}
+  .villa:nth-child(even) .villa-media{order:0}
+  .villa-media,.wed-media{min-height:340px}
+  .villa-body{padding:46px 34px}
+  .wed-body{padding:56px 34px}
+  .exp-grid{grid-template-columns:1fr 1fr}
+  .planner-card{grid-template-columns:1fr}
+  .loc-grid{grid-template-columns:1fr;gap:40px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:36px}
+  .resv-in{grid-template-columns:1fr 1fr}
+  .resv-btn{grid-column:1/-1;padding:18px}
+}
+@media(max-width:600px){
+  :root{--nav:64px}
+  .wrap{padding:0 20px}
+  .topbar{display:none}
+  .sect{padding:78px 0}
+  .header{transform:none}
+  .header.stick{transform:none}
+  .hero{min-height:88vh}
+  .hero-cta .btn{padding:14px 22px;font-size:11px}
+  .resv{margin-top:-20px}
+  .resv-in{grid-template-columns:1fr}
+  .resv-f{border-right:none;border-bottom:1px solid var(--line)}
+  .intro-media .badge{right:16px;bottom:16px;padding:18px 20px}
+  .intro-media .badge .n{font-size:30px}
+  .planner-l,.planner-r{padding:38px 26px}
+  .exp-grid{grid-template-columns:1fr}
+  .fac-list{grid-template-columns:1fr}
+  .gal-grid{grid-template-columns:1fr 1fr;grid-auto-rows:150px}
+  .g-wide{grid-column:span 2}
+  .foot-grid{grid-template-columns:1fr}
+  .sect-head{margin-bottom:44px}
+  .p-row{grid-template-columns:1fr}
+  .lb .prev{left:14px}.lb .next{right:14px}
+  .wa-fab{right:16px;bottom:16px}
+}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="l"><span>Wadduwa <span class="dot"></span> Sri Lanka</span><span>Beachfront Sanctuary</span></div>
+    <div class="r"><a href="tel:+94701200962">+94 70 1 200 962</a><span class="dot"></span><a href="#reserve">Check-in 2:00 PM</a></div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="wrap nav">
+    <a href="#" class="brand"><img src="assets/logo.png" alt="Clove Beach Wadduwa"></a>
+    <nav class="nav-links">
+      <a href="#stay">Stay</a><a href="#facilities">Facilities</a><a href="#dining">Dining</a>
+      <a href="#experiences">Experiences</a><a href="#weddings">Weddings</a><a href="#gallery">Gallery</a>
+    </nav>
+    <a href="#reserve" class="nav-cta">Reserve</a>
+    <button class="hamb" id="hamb" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg" id="heroBg"><img src="assets/aerial.jpg" alt="Aerial view of Clove Beach Wadduwa"></div>
+  <div class="wrap hero-in">
+    <span class="eyebrow center" data-rv="fade">Wadduwa · Sri Lanka</span>
+    <h1 data-rv="fade" style="transition-delay:.1s">A sanctuary<br>by the <em>ocean</em></h1>
+    <p class="hero-sub" data-rv="fade" style="transition-delay:.24s">Where Sri Lankan beauty meets quiet luxury. Private villas, timeless design and the endless rhythm of the sea.</p>
+    <div class="hero-cta" data-rv="fade" style="transition-delay:.36s">
+      <a href="#reserve" class="btn btn-solid"><span>Reserve your stay</span></a>
+      <a href="#stay" class="btn btn-light"><span>Explore the retreat</span></a>
+    </div>
+  </div>
+  <a href="#stay" class="scrollcue"><span>Scroll</span><span class="ln"></span></a>
+</section>
+
+<!-- RESERVATION BAR -->
+<div class="wrap resv" id="reserveBar">
+  <div class="resv-in" data-rv="fade">
+    <div class="resv-f"><label>Arrival</label><input type="date" id="rvIn"></div>
+    <div class="resv-f"><label>Departure</label><input type="date" id="rvOut"></div>
+    <div class="resv-f"><label>Guests</label>
+      <select id="rvGuests"><option>2 Adults</option><option>1 Adult</option><option>2 Adults, 1 Child</option><option>2 Adults, 2 Children</option><option>4 Adults</option></select>
+    </div>
+    <div class="resv-f"><label>Villa</label>
+      <select id="rvVilla"><option>Any villa</option><option>Ocean Villa</option><option>Garden Villa</option><option>Pool Villa</option></select>
+    </div>
+    <button class="resv-btn" onclick="checkAvailability()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M8 2v4M16 2v4M3 9h18"/><rect x="3" y="4" width="18" height="18" rx="2"/></svg>Check availability</button>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="sect">
+  <div class="wrap intro">
+    <div class="intro-media" data-rv>
+      <div class="im"><img src="assets/arrival.jpg" alt="Clove Beach at dusk"></div>
+      <div class="badge"><div class="n">Clove</div><div class="t">Est. Wadduwa</div></div>
+    </div>
+    <div class="intro-text">
+      <span class="eyebrow" data-rv>Welcome to Clove</span>
+      <h2 data-rv style="transition-delay:.08s">A quiet sanctuary,<br>a stone's throw from the sea</h2>
+      <p data-rv style="transition-delay:.16s">Set along the golden shoreline of Wadduwa, Clove Beach is an intimate collection of private villas wrapped in tropical calm. Here, the days move gently, from tranquil swims to dishes that echo luxury.</p>
+      <p data-rv style="transition-delay:.22s">Every detail is designed for refined comfort. A refreshing pool, a serene spa, an ocean-facing bar and lounge spaces that make each moment indulgent, and effortless.</p>
+      <div class="intro-feats" data-rv style="transition-delay:.3s">
+        <span>Private Beachfront</span><span>Spa &amp; Wellness</span><span>All-day Dining</span><span>Weddings &amp; Events</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STAY / VILLAS -->
+<section class="sect villas" id="stay" style="padding-bottom:0">
+  <div class="wrap sect-head">
+    <span class="eyebrow center" data-rv="fade">The Villas</span>
+    <h2 data-rv="fade" style="transition-delay:.08s">Private villas, timeless design</h2>
+    <p data-rv="fade" style="transition-delay:.16s">Spectacular elevated living, wrapped in green and open to the ocean breeze. Each villa a world of its own.</p>
+  </div>
+  <div class="wrap" style="padding:0">
+    <div class="villa" data-rv="fade">
+      <div class="villa-media"><span class="idx">01 · Ocean</span><img src="assets/villa-ocean.jpg" alt="Ocean Villa"></div>
+      <div class="villa-body">
+        <span class="eyebrow">Ocean Villa</span>
+        <h3>Wake to the sound of waves</h3>
+        <p>Ocean-facing calm, steps from the sand. Floor-to-ceiling light, a private terrace, and the horizon as your first view each morning.</p>
+        <ul class="villa-amen">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16"/><path d="M6 12V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5M4 12v5m16-5v5"/></svg>King suite</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Ocean view</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg>Private terrace</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M5 8c0 4 3 5 7 5M19 8c0 4-3 5-7 5"/></svg>Rain shower</li>
+        </ul>
+        <div class="villa-foot">
+          <div class="villa-price">from <b>$180</b> / night</div>
+          <button class="btn" onclick="enquireVilla('Ocean Villa')"><span>Reserve this villa</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="villa" data-rv="fade">
+      <div class="villa-media"><span class="idx">02 · Garden</span><img src="assets/villa-garden.jpg" alt="Garden Villa"></div>
+      <div class="villa-body">
+        <span class="eyebrow">Garden Villa</span>
+        <h3>Wrapped in tropical green</h3>
+        <p>A secluded retreat framed by frangipani and palm. Cool, quiet and utterly private, moments from the pool and the shore.</p>
+        <ul class="villa-amen">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16"/><path d="M6 12V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5M4 12v5m16-5v5"/></svg>Queen suite</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2C8 6 8 10 12 14c4-4 4-8 0-12z"/><path d="M12 14v8"/></svg>Garden view</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg>Private veranda</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h18M6 8h12M9 16h6"/></svg>Daybed lounge</li>
+        </ul>
+        <div class="villa-foot">
+          <div class="villa-price">from <b>$150</b> / night</div>
+          <button class="btn" onclick="enquireVilla('Garden Villa')"><span>Reserve this villa</span></button>
+        </div>
+      </div>
+    </div>
+    <div class="villa" data-rv="fade">
+      <div class="villa-media"><span class="idx">03 · Pool</span><img src="assets/pool.jpg" alt="Pool Villa"></div>
+      <div class="villa-body">
+        <span class="eyebrow">Pool Villa</span>
+        <h3>Your own private plunge</h3>
+        <p>An enclosed courtyard with a private pool and sun deck, shaded by palms. The ultimate seclusion for honeymoons and long stays.</p>
+        <ul class="villa-amen">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 18s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2M2 22s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2"/></svg>Private pool</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16"/><path d="M6 12V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5M4 12v5m16-5v5"/></svg>King suite</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18M5 8c0 4 3 5 7 5M19 8c0 4-3 5-7 5"/></svg>Sun deck</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M5 21V8l7-5 7 5v13"/></svg>Courtyard</li>
+        </ul>
+        <div class="villa-foot">
+          <div class="villa-price">from <b>$240</b> / night</div>
+          <button class="btn" onclick="enquireVilla('Pool Villa')"><span>Reserve this villa</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES parallax -->
+<section class="para" id="facilities">
+  <div class="para-bg" data-para><img src="assets/pool.jpg" alt="Pool at Clove Beach"></div>
+  <div class="wrap para-in">
+    <span class="eyebrow" data-rv>Facilities</span>
+    <h2 data-rv style="transition-delay:.08s">Every moment,<br>designed for refined comfort</h2>
+    <p data-rv style="transition-delay:.16s">From tranquil swims to sunset cocktails, the world-class facilities of Clove Beach ensure your stay is both indulgent and effortless.</p>
+    <ul class="fac-list" data-rv style="transition-delay:.24s">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 18s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2M2 22s2-2 5-2 5 2 5 2 2-2 5-2 5 2 5 2M5 14V6a2 2 0 0 1 2-2h1"/></svg>Freshwater pool</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22c4-3 7-6 7-11a7 7 0 0 0-14 0c0 5 3 8 7 11z"/><circle cx="12" cy="11" r="2.5"/></svg>Spa &amp; wellness</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3h14l-2 9H7L5 3zM9 21h6M12 12v9"/></svg>Ocean-facing bar</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 3v18M8 3v6a3 3 0 0 1-3 3M16 3c-1.5 0-2 2-2 4s.5 4 2 4v10"/></svg>All-day dining</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20V10l8-6 8 6v10M9 20v-6h6v6"/></svg>Lounge spaces</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3"/></svg>Beachfront gardens</li>
+    </ul>
+  </div>
+</section>
+
+<!-- DINING dark -->
+<section class="sect dark" id="dining">
+  <div class="wrap sect-head">
+    <span class="eyebrow center" data-rv="fade">Dining</span>
+    <h2 data-rv="fade" style="transition-delay:.08s">Dishes that echo luxury</h2>
+    <p data-rv="fade" style="transition-delay:.16s">From private beach dinners to sun-drenched breakfasts, our chefs bring the finest of Sri Lankan and world cuisine to your table.</p>
+  </div>
+  <div class="wrap exp-grid">
+    <div class="exp" data-rv="fade"><img src="assets/dining.jpg" alt="Beachfront fine dining"><div class="exp-b"><div class="no">01</div><h4>Ocean-side table</h4><p>Private plated dinners set against the sound of the waves at dusk.</p></div></div>
+    <div class="exp" data-rv="fade" style="transition-delay:.1s"><img src="assets/bar.jpg" alt="Cocktail bar"><div class="exp-b"><div class="no">02</div><h4>The garden bar</h4><p>Signature cocktails and fresh island flavours beneath the frangipani.</p></div></div>
+    <div class="exp" data-rv="fade" style="transition-delay:.2s"><img src="assets/dining-2.jpg" alt="All-day dining"><div class="exp-b"><div class="no">03</div><h4>All-day dining</h4><p>From tropical breakfasts to slow, candle-lit evenings by the sea.</p></div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCES -->
+<section class="sect" id="experiences">
+  <div class="wrap sect-head">
+    <span class="eyebrow center" data-rv="fade">Experiences</span>
+    <h2 data-rv="fade" style="transition-delay:.08s">The rhythm of the coast</h2>
+    <p data-rv="fade" style="transition-delay:.16s">Curated moments beyond the villa, from spa rituals to the quiet drama of a Wadduwa sunset.</p>
+  </div>
+  <div class="wrap exp-grid">
+    <div class="exp" data-rv="fade"><img src="assets/spa.jpg" alt="Spa ritual"><div class="exp-b"><div class="no">01</div><h4>Spa rituals</h4><p>Ayurvedic-inspired treatments that still the mind and restore the body.</p></div></div>
+    <div class="exp" data-rv="fade" style="transition-delay:.1s"><img src="assets/spa-2.jpg" alt="Wellness"><div class="exp-b"><div class="no">02</div><h4>Sunrise wellness</h4><p>Yoga and quiet moments on the beach as the day begins.</p></div></div>
+    <div class="exp" data-rv="fade" style="transition-delay:.2s"><img src="assets/arrival.jpg" alt="Excursions"><div class="exp-b"><div class="no">03</div><h4>Coastal excursions</h4><p>River safaris, turtle hatcheries and the hidden corners of the south.</p></div></div>
+  </div>
+</section>
+
+<!-- WEDDINGS -->
+<section class="wed" id="weddings">
+  <div class="wed-media"><img src="assets/bar.jpg" alt="Weddings & celebrations at Clove Beach"></div>
+  <div class="wed-body">
+    <span class="eyebrow" data-rv>Weddings &amp; Honeymoons</span>
+    <h2 data-rv style="transition-delay:.08s">Say yes,<br>where the sea meets the sky</h2>
+    <p data-rv style="transition-delay:.16s">An exclusive beachfront setting for the moments that matter most. Intimate weddings, dream honeymoons and celebrations designed entirely around you, with the whole retreat as your own.</p>
+    <div data-rv style="transition-delay:.24s"><button class="btn btn-light" onclick="enquireVilla('Wedding / Celebration')"><span>Plan your celebration</span></button></div>
+  </div>
+</section>
+
+<!-- PLANNER (smart) -->
+<section class="sect planner" id="planner">
+  <div class="wrap sect-head">
+    <span class="eyebrow center" data-rv="fade">Design your escape</span>
+    <h2 data-rv="fade" style="transition-delay:.08s">A stay shaped around you</h2>
+    <p data-rv="fade" style="transition-delay:.16s">Tell us the shape of your getaway and we'll craft a tailored proposal, in seconds.</p>
+  </div>
+  <div class="wrap">
+    <div class="planner-card" data-rv="fade">
+      <div class="planner-l">
+        <div class="p-step">
+          <div class="pl">1 · The occasion</div>
+          <div class="p-opts" id="pOcc"></div>
+        </div>
+        <div class="p-step">
+          <div class="pl">2 · Your villa</div>
+          <div class="p-opts" id="pVilla"></div>
+        </div>
+        <div class="p-step">
+          <div class="p-row">
+            <div class="p-field"><label>Arrival</label><input type="date" id="pIn"></div>
+            <div class="p-field"><label>Nights</label>
+              <select id="pNights"><option>2 nights</option><option>3 nights</option><option selected>4 nights</option><option>5 nights</option><option>7 nights</option><option>10 nights</option></select>
+            </div>
+          </div>
+        </div>
+        <div class="p-field"><label>Guests</label>
+          <select id="pGuests"><option>2 guests</option><option>1 guest</option><option>3 guests</option><option>4 guests</option><option>Group (5+)</option></select>
+        </div>
+      </div>
+      <div class="planner-r" id="plannerR">
+        <div class="pr-empty">
+          <img class="mk" src="assets/mark.png" alt="" style="filter:brightness(0) invert(1)">
+          <p>Choose an occasion and a villa, and your tailored escape appears here.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sect" id="gallery" style="background:var(--cream)">
+  <div class="wrap sect-head">
+    <span class="eyebrow center" data-rv="fade">Gallery</span>
+    <h2 data-rv="fade" style="transition-delay:.08s">#CloveBeach</h2>
+  </div>
+  <div class="wrap gal-grid" id="galGrid" data-rv="fade"></div>
+</section>
+
+<!-- LOCATION -->
+<section class="sect loc" id="location">
+  <div class="wrap loc-grid">
+    <div class="loc-info">
+      <span class="eyebrow" data-rv>Location</span>
+      <h2 data-rv style="transition-delay:.08s">On the golden shores<br>of Wadduwa</h2>
+      <p data-rv style="transition-delay:.16s">Just under an hour from Colombo and its international airport, yet a world away. Clove Beach sits directly on the sand, where the south coast begins.</p>
+      <div class="loc-rows" data-rv style="transition-delay:.24s">
+        <div class="lr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg><div><b>Beachfront, Wadduwa</b><span>Southern coast, Sri Lanka</span></div></div>
+        <div class="lr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 3.2 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L9.1 9.9a16 16 0 0 0 6 6l1.3-1.35a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg><div><b>+94 70 1 200 962</b><span>+94 70 2 880 880</span></div></div>
+        <div class="lr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>50 minutes from Colombo</b><span>~1 hour from Bandaranaike International Airport</span></div></div>
+      </div>
+      <button class="btn btn-light" onclick="openMaps()"><span>Get directions</span></button>
+    </div>
+    <div class="loc-map" data-rv="fade">
+      <iframe loading="lazy" src="https://www.google.com/maps?q=Wadduwa%20beach%20Sri%20Lanka&output=embed" title="Clove Beach Wadduwa location"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVE CTA -->
+<section class="cta" id="reserve">
+  <div class="cta-bg" data-para><img src="assets/aerial.jpg" alt=""></div>
+  <div class="wrap cta-in">
+    <span class="eyebrow center" data-rv="fade">Your escape awaits</span>
+    <h2 data-rv="fade" style="transition-delay:.08s">Reserve your sanctuary</h2>
+    <p data-rv="fade" style="transition-delay:.16s">Speak with our team and let us design a stay that stays with you. We reply within the hour.</p>
+    <div class="hero-cta" data-rv="fade" style="transition-delay:.24s">
+      <a href="https://wa.me/94701200962?text=Hello%20Clove%20Beach%2C%20I'd%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener" class="btn btn-solid"><span>Reserve on WhatsApp</span></a>
+      <a href="tel:+94701200962" class="btn btn-light"><span>Call the retreat</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="assets/logo.png" alt="Clove Beach Wadduwa">
+        <p>A private beachfront sanctuary of quiet luxury on the golden shores of Wadduwa, Sri Lanka.</p>
+        <div class="foot-soc">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .5-1.5 1.7-1.5H17V2.5h-2.5C11.7 2.5 10 4.2 10 7v2H7.5v3.2H10V21.5h4v-9.3h2.7l.5-3.2H14z"/></svg></a>
+          <a href="https://wa.me/94701200962" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4.9A9.8 9.8 0 0 0 12 2C6.6 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4a9.9 9.9 0 0 0 4.7 1.2c5.5 0 9.9-4.5 9.9-9.9 0-2.6-1-5.1-2.9-7zM12 20.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7 3.9z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col"><h4>Discover</h4><a href="#stay">The Villas</a><a href="#facilities">Facilities</a><a href="#dining">Dining</a><a href="#experiences">Experiences</a></div>
+      <div class="foot-col"><h4>Celebrate</h4><a href="#weddings">Weddings</a><a href="#weddings">Honeymoons</a><a href="#planner">Design your escape</a><a href="#gallery">Gallery</a></div>
+      <div class="foot-col foot-contact"><h4>Contact</h4>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg>Beachfront, Wadduwa, Sri Lanka</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 3.2 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L9.1 9.9a16 16 0 0 0 6 6l1.3-1.35a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg>+94 70 1 200 962</div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>reserve@clovehotels.com</div>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 Clove Beach Wadduwa. All rights reserved.</span>
+      <span>Concept rebuild by Business Booster</span>
+    </div>
+  </div>
+</footer>
+
+<a class="wa-fab" href="https://wa.me/94701200962?text=Hello%20Clove%20Beach!" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4.9A9.8 9.8 0 0 0 12 2C6.6 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4a9.9 9.9 0 0 0 4.7 1.2h.004c5.5 0 9.9-4.5 9.9-9.9 0-2.6-1-5.1-2.9-7zM12 20.2h-.003a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.1.81.83-3.02-.2-.31a8.2 8.2 0 1 1 7.15 4z"/></svg></a>
+
+<!-- MOBILE MENU -->
+<div class="mscrim" id="mscrim" onclick="closeMenu()"></div>
+<aside class="mmenu" id="mmenu">
+  <button class="mx" onclick="closeMenu()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <img src="assets/logo.png" alt="Clove Beach">
+  <a href="#stay" onclick="closeMenu()">Stay</a>
+  <a href="#facilities" onclick="closeMenu()">Facilities</a>
+  <a href="#dining" onclick="closeMenu()">Dining</a>
+  <a href="#experiences" onclick="closeMenu()">Experiences</a>
+  <a href="#weddings" onclick="closeMenu()">Weddings</a>
+  <a href="#gallery" onclick="closeMenu()">Gallery</a>
+  <a href="#reserve" class="btn btn-solid" onclick="closeMenu()"><span>Reserve</span></a>
+</aside>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <button class="x" onclick="closeLb()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <button class="nav-b prev" onclick="lbStep(-1)" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 6l-6 6 6 6"/></svg></button>
+  <img id="lbImg" src="" alt="">
+  <button class="nav-b next" onclick="lbStep(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<script>
+const WA="94701200962";
+/* ===== HEADER + PROGRESS + PARALLAX ===== */
+const header=document.getElementById('header'),heroBg=document.getElementById('heroBg'),progress=document.getElementById('progress');
+const paraEls=[...document.querySelectorAll('[data-para]')];
+let ticking=false;
+function onScroll(){
+  const y=window.pageYOffset;
+  header.classList.toggle('stick',y>60);
+  const h=document.documentElement.scrollHeight-window.innerHeight;
+  progress.style.width=(h>0?(y/h*100):0)+'%';
+  if(heroBg&&y<window.innerHeight)heroBg.style.transform='translateY('+(y*0.28)+'px)';
+  paraEls.forEach(el=>{const r=el.parentElement.getBoundingClientRect();if(r.bottom>0&&r.top<window.innerHeight){const off=(window.innerHeight-r.top)*0.06;el.style.transform='translateY('+(-off+40)+'px)';}});
+  ticking=false;
+}
+window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(onScroll);ticking=true;}},{passive:true});
+
+/* ===== REVEAL (gated) ===== */
+function reveal(){
+  const els=[...document.querySelectorAll('[data-rv]')];
+  if(!els.length)return;
+  document.documentElement.classList.add('reveal-on');
+  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('in'));return;}
+  const io=new IntersectionObserver((ents)=>{ents.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.14,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(e=>io.observe(e));
+  setTimeout(()=>els.forEach(e=>{if(e.getBoundingClientRect().top<window.innerHeight)e.classList.add('in');}),400);
+}
+
+/* ===== MOBILE MENU ===== */
+function openMenu(){document.getElementById('mmenu').classList.add('open');document.getElementById('mscrim').classList.add('open');document.body.style.overflow='hidden';}
+function closeMenu(){document.getElementById('mmenu').classList.remove('open');document.getElementById('mscrim').classList.remove('open');document.body.style.overflow='';}
+document.getElementById('hamb').addEventListener('click',openMenu);
+
+/* ===== RESERVATION + ENQUIRY ===== */
+function fmtDate(v){if(!v)return'flexible dates';try{return new Date(v).toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});}catch(e){return v;}}
+function wa(msg){return 'https://wa.me/'+WA+'?text='+encodeURIComponent(msg);}
+function checkAvailability(){
+  const i=fmtDate(document.getElementById('rvIn').value),o=fmtDate(document.getElementById('rvOut').value);
+  const g=document.getElementById('rvGuests').value,v=document.getElementById('rvVilla').value;
+  const msg=`Hello Clove Beach, I'd like to check availability.\n\nArrival: ${i}\nDeparture: ${o}\nGuests: ${g}\nVilla: ${v}\n\nCould you confirm availability and rates? Thank you.`;
+  window.open(wa(msg),'_blank');
+}
+function enquireVilla(name){
+  const msg=`Hello Clove Beach, I'd like to enquire about the ${name}.\n\nMy preferred dates:\nGuests:\n\nCould you share availability and rates? Thank you.`;
+  window.open(wa(msg),'_blank');
+}
+function openMaps(){window.open('https://www.google.com/maps/search/?api=1&query=Wadduwa+beach+Sri+Lanka','_blank');}
+
+/* ===== DESIGN YOUR ESCAPE (planner) ===== */
+const OCCASIONS=[
+  {key:'Honeymoon',villa:'Pool Villa',incl:['Private pool villa for two','Candle-lit beach dinner for the couple','Sunset cocktails at the garden bar','Couple’s spa ritual','Daily tropical breakfast in-villa'],line:'A romantic escape for two, wrapped in privacy.'},
+  {key:'Wedding',villa:'Ocean Villa',incl:['Exclusive beachfront ceremony setting','Dedicated events host & planning','Welcome reception for your guests','Bridal suite & preparation lounge','Custom menu with our chefs'],line:'Your celebration, with the whole retreat as your own.'},
+  {key:'Family',villa:'Garden Villa',incl:['Spacious garden villa for the family','Pool & beach days, safely by the shore','All-day dining with children’s favourites','Coastal excursion (turtle hatchery / river safari)','Flexible check-in & late checkout'],line:'Easy, joyful days by the sea for all ages.'},
+  {key:'Wellness',villa:'Garden Villa',incl:['Serene garden villa retreat','Daily sunrise yoga on the beach','Ayurvedic-inspired spa treatments','Nourishing wellness dining menu','Quiet lounge & meditation spaces'],line:'Slow mornings and deep rest, restored by the ocean.'},
+  {key:'Beach getaway',villa:'Ocean Villa',incl:['Ocean-facing villa, steps from the sand','Reserved sun-loungers by the pool','Sunset cocktails & island tapas','A long lazy beachfront lunch','Late checkout on your final day'],line:'The simple luxury of doing beautifully little.'},
+];
+const P_VILLAS=['Ocean Villa','Garden Villa','Pool Villa'];
+let pOcc=null,pVilla=null;
+function renderPlanner(){
+  document.getElementById('pOcc').innerHTML=OCCASIONS.map(o=>`<button class="p-chip" data-o="${o.key}" onclick="pickOcc('${o.key}')">${o.key}</button>`).join('');
+  document.getElementById('pVilla').innerHTML=P_VILLAS.map(v=>`<button class="p-chip" data-v="${v}" onclick="pickVilla('${v}')">${v}</button>`).join('');
+}
+function pickOcc(k){pOcc=k;const o=OCCASIONS.find(x=>x.key===k);if(o&&!pVilla)pVilla=o.villa;document.querySelectorAll('#pOcc .p-chip').forEach(c=>c.classList.toggle('sel',c.dataset.o===k));syncVillaChips();buildEscape();}
+function pickVilla(v){pVilla=v;syncVillaChips();buildEscape();}
+function syncVillaChips(){document.querySelectorAll('#pVilla .p-chip').forEach(c=>c.classList.toggle('sel',c.dataset.v===pVilla));}
+function buildEscape(){
+  if(!pOcc){return;}
+  const o=OCCASIONS.find(x=>x.key===pOcc);const villa=pVilla||o.villa;
+  const nights=document.getElementById('pNights').value,guests=document.getElementById('pGuests').value,arr=fmtDate(document.getElementById('pIn').value);
+  document.getElementById('plannerR').innerHTML=`
+    <div class="pr-head">
+      <span class="eyebrow">Your ${pOcc.toLowerCase()} at Clove</span>
+      <h3>${villa}</h3>
+      <div class="sub">${o.line}</div>
+    </div>
+    <ul class="pr-incl">${o.incl.map(i=>`<li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg>${i}</li>`).join('')}</ul>
+    <button class="btn btn-light" style="width:100%" onclick="sendEscape()"><span>Enquire about this escape</span></button>
+    <div class="pr-note">${arr} · ${nights} · ${guests} · no payment now, we'll confirm by WhatsApp.</div>`;
+}
+function sendEscape(){
+  const o=OCCASIONS.find(x=>x.key===pOcc);const villa=pVilla||o.villa;
+  const nights=document.getElementById('pNights').value,guests=document.getElementById('pGuests').value,arr=fmtDate(document.getElementById('pIn').value);
+  const msg=`Hello Clove Beach, I'd love to design a ${pOcc} escape.\n\nVilla: ${villa}\nArrival: ${arr}\nDuration: ${nights}\nGuests: ${guests}\n\nCould you share a tailored proposal and rates? Thank you.`;
+  window.open(wa(msg),'_blank');
+}
+
+/* ===== GALLERY + LIGHTBOX ===== */
+const GAL=[
+  {src:'assets/aerial.jpg',c:'g-tall'},{src:'assets/pool.jpg',c:''},{src:'assets/villa-ocean.jpg',c:''},
+  {src:'assets/dining.jpg',c:'g-wide'},{src:'assets/spa.jpg',c:''},{src:'assets/arrival.jpg',c:'g-tall'},
+  {src:'assets/bar.jpg',c:''},{src:'assets/villa-garden.jpg',c:''},{src:'assets/dining-2.jpg',c:'g-wide'},{src:'assets/spa-2.jpg',c:''}
+];
+function renderGallery(){
+  document.getElementById('galGrid').innerHTML=GAL.map((g,i)=>`<div class="gal-item ${g.c}" onclick="openLb(${i})"><img src="${g.src}" alt="Clove Beach gallery" loading="lazy"><span class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></svg></span></div>`).join('');
+}
+let lbi=0;
+function openLb(i){lbi=i;document.getElementById('lbImg').src=GAL[i].src;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+function lbStep(d){lbi=(lbi+d+GAL.length)%GAL.length;document.getElementById('lbImg').src=GAL[lbi].src;}
+document.getElementById('lb').addEventListener('click',e=>{if(e.target.id==='lb')closeLb();});
+document.addEventListener('keydown',e=>{if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowRight')lbStep(1);if(e.key==='ArrowLeft')lbStep(-1);});
+
+/* ===== INIT ===== */
+(function init(){
+  renderPlanner();renderGallery();reveal();onScroll();
+  // set sensible default dates
+  const t=new Date();t.setDate(t.getDate()+14);const t2=new Date(t);t2.setDate(t2.getDate()+4);
+  const iso=d=>d.toISOString().slice(0,10);
+  ['rvIn','pIn'].forEach(id=>{const el=document.getElementById(id);if(el)el.value=iso(t);});
+  const o=document.getElementById('rvOut');if(o)o.value=iso(t2);
+})();
+</script>
+</body>
+</html>

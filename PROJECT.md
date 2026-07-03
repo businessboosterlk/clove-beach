@@ -25,7 +25,7 @@ aerial (hero), arrival (blue-hour), pool, villa-ocean, villa-garden, spa, spa-2,
 - [x] Premium motion: scroll progress, header refine-on-scroll, hero + band parallax, gated fade/slide reveals (reduced-motion safe), staggered delays, hover image zooms, button fill sweeps. Fonts Playfair Display + Jost. Palette deep teal + brass + ivory.
 - [x] Smart features (all verified): reservation bar → prefilled WhatsApp availability enquiry; villa "reserve" → WhatsApp; "Design your escape" planner (occasion → auto villa + tailored 5-item package → WhatsApp); gallery lightbox (keyboard + swipe arrows).
 - [x] Verified: console clean, desktop + mobile 390px, iOS off-screen audit 0 offenders (incl. mobile menu open). Fixed mobile top-bar/header overlap.
-- [ ] Deploy to GitHub Pages (awaiting approval)
+- [x] Deployed: https://businessboosterlk.github.io/clove-beach/ (repo businessboosterlk/clove-beach)
 - [x] Learnings written back
 
 ## Serving locally

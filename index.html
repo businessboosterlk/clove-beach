@@ -2,234 +2,560 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Clove Beach Wadduwa · A Sanctuary by the Ocean</title>
-<meta name="description" content="Clove Beach, Wadduwa. A private beachfront sanctuary of quiet luxury in Sri Lanka. Ocean, garden and pool villas, spa, all-day dining, weddings and honeymoons.">
-<meta name="theme-color" content="#001d39">
-<link rel="icon" type="image/png" href="assets/mark-cyan.png">
-<meta property="og:title" content="Clove Beach Wadduwa · A Sanctuary by the Ocean">
-<meta property="og:description" content="Clove Beach, Wadduwa. A private beachfront sanctuary of quiet luxury in Sri Lanka. Ocean, garden and pool villas, spa, all-day dining, weddings and honeymoons.">
-<meta property="og:image" content="assets/aerial.jpg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clove Beach Wadduwa · Boutique beachfront villas, Sri Lanka</title>
+<meta name="description" content="A twelve-villa boutique beachfront hotel on Sri Lanka's west coast, forty-five minutes south of Colombo. Private plunge pools, quiet luxury and the Indian Ocean.">
+<meta name="theme-color" content="#0f2621">
+<meta property="og:title" content="Clove Beach Wadduwa">
+<meta property="og:description" content="Boutique beachfront villas on Sri Lanka's west coast.">
+<link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="%230f2621"/><text x="32" y="45" font-family="Georgia,serif" font-size="38" font-style="italic" fill="%23b0894e" text-anchor="middle">C</text></svg>'>
+<meta name="robots" content="noindex">
+<meta property="og:image" content="https://businessboosterlk.github.io/clove-beach/assets/img/hero.jpg">
+<meta property="og:url" content="https://businessboosterlk.github.io/clove-beach/">
+<link rel="preload" as="image" href="assets/img/hero.jpg">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style id="imvars">
+:root{
+  --im-ocean:url("assets/img/villa-ocean.jpg");
+  --im-g1:url("assets/img/villa-garden1.jpg");
+  --im-g2:url("assets/img/villa-garden2.jpg");
+}
+</style>
+<style>
+:root{
+  --brand:#b0894e; --brand-dark:#96723d; --brand-deep:#7a5d31; --brand-glow:rgba(176,137,78,.28);
+  --ink:#17211d; --muted:#5a625d; --faint:#8a908a;
+  --bg:#f7f4ee; --surface:#fffdf9; --surface-2:#f0ebe0; --line:#e7e1d5; --line-2:#d8d1c2;
+  --teal:#0f2621; --teal-2:#153029;
+  --shadow-xs:0 1px 2px rgba(30,25,15,.05),0 1px 1px rgba(30,25,15,.04);
+  --shadow:0 2px 6px rgba(30,25,15,.06),0 8px 22px rgba(30,25,15,.07);
+  --shadow-md:0 10px 24px rgba(30,25,15,.10),0 22px 50px rgba(30,25,15,.12);
+  --ring:0 0 0 3px var(--brand-glow);
+  --font-display:'Playfair Display',Georgia,serif;
+  --font-sans:'Inter',system-ui,sans-serif;
+  --s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:20px;--s-6:24px;--s-8:32px;--s-10:40px;--s-12:48px;--s-16:64px;--s-20:80px;--s-24:96px;--s-32:128px;
+  --ease:cubic-bezier(.16,1,.3,1);--t-fast:.15s;--t:.25s;--t-slow:.45s;
+  --maxw:1180px;--gutter:clamp(20px,5vw,44px);--nav-h:76px;
+  --r:14px;--r-md:11px;--r-sm:8px;--r-pill:999px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-sans);font-size:15px;line-height:1.6;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:clip}
+h1,h2,h3{font-family:var(--font-display);font-weight:500;line-height:1.08;letter-spacing:.005em;color:var(--ink)}
+h1 em,h2 em{font-style:italic;font-weight:500}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+svg{flex-shrink:0}
+:focus-visible{outline:none;box-shadow:var(--ring);border-radius:var(--r-sm)}
+::selection{background:var(--brand);color:#fff}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter)}
+.section{padding:var(--s-24) 0}
+.eyebrow{font-family:var(--font-sans);font-weight:600;font-size:11.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--brand-deep)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.06s!important;scroll-behavior:auto!important}.kb{animation:none!important}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-sans);font-weight:600;font-size:13px;letter-spacing:.02em;padding:15px 28px;border-radius:var(--r-pill);white-space:nowrap;transition:transform var(--t-fast) var(--ease),box-shadow var(--t),background var(--t),color var(--t)}
+.btn:active{transform:scale(.98)}
+.btn-primary{color:#fff;background:var(--brand);box-shadow:0 6px 18px var(--brand-glow)}
+.btn-primary:hover{background:var(--brand-dark);transform:translateY(-1px);box-shadow:0 10px 26px var(--brand-glow)}
+.btn-light{color:#fff;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(8px)}
+.btn-light:hover{background:rgba(255,255,255,.2)}
+.btn-ink{color:#fff;background:var(--teal)}
+.btn-ink:hover{background:var(--teal-2);transform:translateY(-1px)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);transition:background var(--t),box-shadow var(--t),border-color var(--t);border-bottom:1px solid transparent}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:100%}
+.brand{display:flex;flex-direction:column;line-height:1;gap:3px}
+.brand .b1{font-family:var(--font-display);font-weight:500;font-size:24px;letter-spacing:.06em;color:#fff;transition:color var(--t)}
+.brand .b2{font-size:9.5px;letter-spacing:.34em;color:rgba(255,255,255,.7);transition:color var(--t)}
+.nav-links{display:flex;gap:var(--s-8)}
+.nav-links a{font-size:13px;font-weight:500;letter-spacing:.04em;color:rgba(255,255,255,.85);transition:color var(--t-fast)}
+.nav-links a:hover{color:#fff}
+.nav .btn{padding:11px 22px}
+.nav.stick{background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:saturate(150%) blur(14px);box-shadow:var(--shadow-xs);border-color:var(--line)}
+.nav.stick .brand .b1{color:var(--ink)}
+.nav.stick .brand .b2{color:var(--faint)}
+.nav.stick .nav-links a{color:var(--muted)}
+.nav.stick .nav-links a:hover{color:var(--ink)}
+.nav.stick .btn-light{color:var(--ink);background:transparent;border-color:var(--line-2)}
+.nav.stick .btn-light:hover{background:var(--surface-2)}
+.hamb{display:none;width:44px;height:44px;align-items:center;justify-content:center;color:#fff}
+.nav.stick .hamb{color:var(--ink)}
+.hamb svg{width:26px;height:26px}
+@media(max-width:900px){.nav-links,.nav .wrap>.btn{display:none}.hamb{display:flex}}
+.drawer{position:fixed;inset:0 0 0 auto;width:min(84vw,320px);z-index:200;background:var(--surface);padding:var(--s-10) var(--s-8);box-shadow:var(--shadow-md);opacity:0;visibility:hidden;transform:translateX(-14px);transition:all var(--t) var(--ease)}
+.drawer.open{opacity:1;visibility:visible;transform:translateX(0)}
+.drawer a{display:block;padding:var(--s-4) 0;font-family:var(--font-display);font-size:22px;border-bottom:1px solid var(--line);color:var(--ink)}
+.scrim{position:fixed;inset:0;z-index:199;background:rgba(15,20,18,.5);opacity:0;visibility:hidden;transition:opacity var(--t)}
+.scrim.open{opacity:1;visibility:visible}
+
+/* hero */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+.hero-media{position:absolute;inset:0;bottom:-16%;z-index:0;overflow:hidden;background:var(--teal);will-change:transform}
+.hero-layer{position:absolute;inset:0;width:100%;height:100%;opacity:0;transition:opacity .9s var(--ease)}
+.hero-layer.is-on{opacity:1}
+img.hero-layer{object-fit:cover}
+div.hero-layer{background-size:cover;background-position:center}
+.hero-layer[data-villa="ocean"]{background-image:var(--im-ocean)}
+.hero-layer[data-villa="garden1"]{background-image:var(--im-g1)}
+.hero-layer[data-villa="garden2"]{background-image:var(--im-g2)}
+.kb{animation:kb 22s ease-in-out infinite alternate;transform-origin:60% 52%}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.15)}}
+.hero-ov{position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,rgba(15,20,18,.44) 0%,rgba(15,20,18,.14) 30%,rgba(15,20,18,.28) 58%,rgba(15,20,18,.82) 100%)}
+.hero .wrap{position:relative;z-index:2;text-align:center;padding-top:var(--nav-h);width:100%}
+.hero .eyebrow{color:rgba(255,255,255,.9);display:block;margin-bottom:var(--s-5)}
+.hero h1{font-size:clamp(44px,8vw,96px);color:#fff;font-weight:500;max-width:15ch;margin:0 auto}
+.hero h1 .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}
+.hero h1 .wi{display:inline-block}
+html.rv .hero h1 .wi{animation:wrise 1.05s var(--ease) both;animation-delay:calc(.15s + var(--i)*.09s)}
+@keyframes wrise{from{transform:translateY(115%)}}
+.hero p{max-width:44ch;margin:var(--s-5) auto 0;color:rgba(255,255,255,.9);font-size:clamp(16px,2.1vw,19px)}
+html.rv .hero .eyebrow,html.rv .hero p{animation:hfade 1s var(--ease) both;animation-delay:.75s}
+@keyframes hfade{from{opacity:0;transform:translateY(14px)}}
+
+/* villa picker (overlaps the hero) */
+.sect-head{text-align:center;max-width:640px;margin:0 auto var(--s-16)}
+.sect-head h2{font-size:clamp(32px,4.6vw,52px);margin:var(--s-4) 0 var(--s-4)}
+.sect-head p{color:var(--muted);font-size:17px}
+.picker{position:relative;z-index:5;margin-top:-210px;padding-bottom:var(--s-16)}
+.picker-head{text-align:center;margin-bottom:var(--s-8)}
+.picker-head .eyebrow{color:rgba(255,255,255,.92)}
+.picker-head h2{color:#fff;font-size:clamp(28px,3.8vw,44px);margin-top:var(--s-3);text-shadow:0 2px 26px rgba(0,0,0,.4)}
+.picker-head p{color:rgba(255,255,255,.85);margin-top:var(--s-3);font-size:15px}
+@media(max-width:860px){
+  .picker{margin-top:var(--s-12)}
+  .picker-head .eyebrow{color:var(--brand-deep)}
+  .picker-head h2{color:var(--ink);text-shadow:none}
+  .picker-head p{color:var(--muted)}
+}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-6)}
+@media(max-width:860px){.vgrid{grid-template-columns:1fr;max-width:420px;margin:0 auto}}
+.vcard{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;box-shadow:var(--shadow-md);transition:transform var(--t) var(--ease),box-shadow var(--t),border-color var(--t)}
+.vcard:hover{transform:translateY(-8px);box-shadow:0 22px 50px rgba(15,20,18,.28);border-color:var(--brand)}
+.vcard.selected{border-color:var(--brand);box-shadow:0 0 0 2px var(--brand),0 22px 50px rgba(15,20,18,.28)}
+.vcard .tick{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;display:none;align-items:center;justify-content:center;box-shadow:var(--shadow);z-index:2}
+.vcard.selected .tick{display:flex}
+.vcard .tick svg{width:17px;height:17px}
+.vcard .ph{aspect-ratio:4/5;background-size:cover;background-position:center;transition:transform var(--t-slow) var(--ease)}
+.vcard[data-v="ocean"] .ph{background-image:var(--im-ocean)}
+.vcard[data-v="garden1"] .ph{background-image:var(--im-g1)}
+.vcard[data-v="garden2"] .ph{background-image:var(--im-g2)}
+.vcard .body{padding:var(--s-6) var(--s-6) var(--s-8)}
+.vcard h3{font-size:23px;margin-bottom:var(--s-3)}
+.vcard .det{color:var(--muted);font-size:14.5px;line-height:1.55;min-height:44px}
+.vcard .more{display:inline-flex;align-items:center;gap:8px;margin-top:var(--s-5);font-weight:600;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--brand-deep);transition:gap var(--t)}
+.vcard .more svg{width:16px;height:16px}
+.vcard:hover .more{gap:13px}
+.pick-confirm{max-width:540px;margin:var(--s-10) auto 0;display:none;align-items:center;justify-content:space-between;gap:var(--s-4);background:var(--surface);border:1px solid var(--line);border-radius:var(--r-pill);padding:9px 9px 9px 24px;box-shadow:var(--shadow-md)}
+.pick-confirm.show{display:flex}
+.pick-confirm span{font-family:var(--font-display);font-size:17px;color:var(--ink)}
+.pick-confirm b{color:var(--brand-deep)}
+@media(max-width:520px){.pick-confirm{flex-direction:column;border-radius:var(--r);padding:var(--s-5);text-align:center}.pick-confirm .btn{width:100%}}
+
+/* availability bar */
+.availwrap{position:relative;z-index:6}
+.availbar{max-width:900px;margin:var(--s-4) auto 0;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow-md);display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:0;padding:10px;align-items:center}
+@media(max-width:760px){.availbar{grid-template-columns:1fr 1fr;row-gap:6px}}
+@media(max-width:440px){.availbar{grid-template-columns:1fr}}
+.af{display:flex;flex-direction:column;gap:2px;padding:8px 20px;border-right:1px solid var(--line)}
+@media(max-width:760px){.af{border-right:none}}
+.af label{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);font-weight:600}
+.af input,.af select{border:none;background:none;font-family:var(--font-sans);font-size:15px;color:var(--ink);padding:2px 0;width:100%;cursor:pointer}
+.af input:focus,.af select:focus{outline:none;color:var(--brand-deep)}
+.availbar .btn{margin-left:8px}
+@media(max-width:760px){.availbar .btn{grid-column:1/-1;width:100%;margin:6px 0 0}}
+.avail-note{text-align:center;font-size:12px;color:var(--faint);margin-top:var(--s-3)}
+
+/* THE WALK - signature scrubbed kinetic stack */
+.walk{padding:var(--s-32) 0;overflow:hidden}
+.walk-row{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:var(--s-10);max-width:880px;margin:0 auto;padding:var(--s-8) var(--gutter)}
+@media(max-width:700px){.walk-row{grid-template-columns:1fr;gap:var(--s-3);padding:var(--s-6) var(--gutter)}}
+.walk-word{font-family:var(--font-display);font-style:italic;font-weight:500;font-size:clamp(52px,9vw,104px);line-height:.98;color:var(--ink);letter-spacing:.01em}
+.walk-rule{height:1px;background:var(--brand);transform-origin:left;transform:scaleX(1);margin-top:var(--s-2)}
+.walk-copy{color:var(--muted);font-size:16.5px;max-width:34ch;line-height:1.65}
+html.rv .walk-row{opacity:calc(.22 + var(--p,1)*.78)}
+html.rv .walk-rule{transform:scaleX(var(--p,1))}
+
+/* story collage + stat numerals */
+.storyc .inner{display:grid;grid-template-columns:1fr 1.05fr;gap:var(--s-16);align-items:center}
+@media(max-width:860px){.storyc .inner{grid-template-columns:1fr;gap:var(--s-12)}}
+.storyc h2{font-size:clamp(30px,4.4vw,48px);margin:var(--s-4) 0 var(--s-5)}
+.storyc p{color:var(--muted);font-size:16.5px;line-height:1.7;max-width:42ch}
+.stats{display:flex;gap:var(--s-8);flex-wrap:wrap;margin-top:var(--s-10)}
+.stat b{display:block;font-family:var(--font-display);font-style:italic;font-weight:500;font-size:44px;color:var(--brand-deep);line-height:1;margin-bottom:6px}
+.stat span{font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase;font-weight:600}
+.cluster{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto auto;gap:var(--s-4);align-items:start}
+.cluster img{width:100%;object-fit:cover;border-radius:var(--r);box-shadow:var(--shadow)}
+.cluster .c1{grid-row:1/3;aspect-ratio:3/4.3;height:100%}
+.cluster .c2{aspect-ratio:4/3.2}
+.cluster .c3{aspect-ratio:4/3.2;margin-top:var(--s-8)}
+
+/* experience row */
+.exp{text-align:center}
+.exp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-10);max-width:940px;margin:0 auto}
+@media(max-width:760px){.exp-grid{grid-template-columns:1fr;gap:var(--s-12);max-width:360px}}
+.exp-item .ic{width:44px;height:44px;margin:0 auto var(--s-5);color:var(--brand-deep)}
+.exp-item .ic svg{width:44px;height:44px;stroke-width:1.2}
+.exp-item h3{font-size:21px;margin-bottom:var(--s-3)}
+.exp-item p{color:var(--muted);font-size:14.5px;max-width:26ch;margin:0 auto}
+
+/* dining split */
+.dining .inner{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:var(--s-16)}
+@media(max-width:860px){.dining .inner{grid-template-columns:1fr;gap:var(--s-10)}}
+.dining .media{border-radius:var(--r);overflow:hidden;aspect-ratio:5/4}
+.dining .media img{width:100%;height:100%;object-fit:cover}
+.dining h2{font-size:clamp(30px,4.4vw,48px);margin:var(--s-4) 0 var(--s-5)}
+.dining p{color:var(--muted);font-size:16.5px;line-height:1.7;max-width:44ch}
+.dining .btn{margin-top:var(--s-8)}
+
+/* gallery bento */
+.gallery-sec{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.mosaic{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:158px;gap:var(--s-4);grid-auto-flow:dense}
+@media(max-width:760px){.mosaic{grid-template-columns:repeat(2,1fr);grid-auto-rows:132px}}
+.mosaic figure{overflow:hidden;border-radius:var(--r-md);box-shadow:var(--shadow-xs)}
+.mosaic img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow) var(--ease)}
+.mosaic figure:hover img{transform:scale(1.05)}
+.mosaic .big{grid-column:span 2;grid-row:span 2}
+
+/* cta band */
+.cta{position:relative;overflow:hidden;color:#fff;text-align:center;padding:var(--s-32) 0}
+.cta-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.cta-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(160deg,rgba(15,38,33,.86),rgba(15,20,18,.78))}
+.cta .wrap{position:relative;z-index:2}
+.cta .eyebrow{color:var(--brand)}
+.cta h2{color:#fff;font-size:clamp(32px,5vw,56px);margin:var(--s-5) 0 var(--s-4)}
+.cta p{color:rgba(255,255,255,.85);max-width:44ch;margin:0 auto var(--s-10);font-size:17px}
+.cta-cta{display:flex;gap:var(--s-4);justify-content:center;flex-wrap:wrap;align-items:center}
+.cta .tel{color:rgba(255,255,255,.85);font-size:14px;letter-spacing:.04em}
+
+/* footer */
+.footer{background:var(--teal-2);color:rgba(255,255,255,.66);padding:var(--s-20) 0 var(--s-8)}
+.footer .cols{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:var(--s-10)}
+@media(max-width:760px){.footer .cols{grid-template-columns:1fr 1fr}}
+.footer .brand .b1{color:#fff}.footer .brand .b2{color:rgba(255,255,255,.6)}
+.footer .tag{margin-top:var(--s-4);font-size:14px;max-width:32ch;line-height:1.6}
+.footer h4{color:#fff;font-family:var(--font-sans);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:var(--s-5)}
+.footer a{display:block;padding:5px 0;font-size:14px;color:rgba(255,255,255,.66);transition:color var(--t-fast)}
+.footer a:hover{color:#fff}
+.footer .bar{border-top:1px solid rgba(255,255,255,.12);margin-top:var(--s-16);padding-top:var(--s-6);display:flex;justify-content:space-between;gap:var(--s-4);font-size:12.5px;flex-wrap:wrap;color:rgba(255,255,255,.5)}
+
+/* sticky mobile booking bar */
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:150;display:none;gap:10px;padding:11px 14px calc(11px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--surface) 95%,transparent);backdrop-filter:saturate(160%) blur(14px);border-top:1px solid var(--line);box-shadow:0 -6px 22px rgba(15,20,18,.10);transform:translateY(120%);transition:transform var(--t) var(--ease)}
+.mbar.show{transform:translateY(0)}
+.mbar .btn{flex:1;padding:15px}
+@media(max-width:860px){.mbar{display:flex}}
+
+/* reveals: fade for text, clip-wipe mask for imagery. Base = visible. */
+html.reveal-on [data-rv]{opacity:0;transform:translateY(20px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+html.reveal-on [data-rv].in{opacity:1;transform:none}
+html.reveal-on [data-rv].mask{opacity:1;transform:none;clip-path:inset(0 0 100% 0);transition:clip-path 1.05s var(--ease)}
+html.reveal-on [data-rv].mask.in{clip-path:inset(0 0 0% 0)}
+</style>
 </head>
 <body>
-<div class="progress" id="progress"></div>
-<div class="topbar">
+
+<header class="nav" id="nav">
   <div class="wrap">
-    <div class="l"><span>Wadduwa <span class="dot"></span> Sri Lanka</span><span>Beachfront Sanctuary</span></div>
-    <div class="r"><a href="tel:+94701200962">+94 70 1 200 962</a><span class="dot"></span><a href="https://bookings.clovehotels.com/clovebeachhotel/booking/hotels/clove-beach-hotel-wadduwa" target="_blank" rel="noopener">Book online</a></div>
-  </div>
-</div>
-<header class="header" id="header">
-  <div class="wrap nav">
-    <a href="index.html" class="brand">
-      <img class="lw" src="assets/logo-white.png" alt="Clove Beach Wadduwa">
-      <img class="lf" src="assets/logo-full.png" alt="Clove Beach Wadduwa">
-    </a>
+    <a href="#top" class="brand"><span class="b1">Clove</span><span class="b2">BEACH · WADDUWA</span></a>
     <nav class="nav-links">
-      <a href="index.html">Home</a><a href="rooms.html">Villas</a><a href="dining.html">Dining</a>
-      <a href="gallery.html">Gallery</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+      <a href="#villas">Villas</a><a href="#story">The Hotel</a><a href="#dining">Dining</a><a href="#gallery">Gallery</a>
     </nav>
-    <a href="https://bookings.clovehotels.com/clovebeachhotel/booking/hotels/clove-beach-hotel-wadduwa" target="_blank" rel="noopener" class="nav-cta">Book now</a>
-    <button class="hamb" id="hamb" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    <a class="btn btn-light" href="#reserve">Reserve</a>
+    <button class="hamb" aria-label="Menu" onclick="openDrawer()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
   </div>
 </header>
+<div class="scrim" id="scrim" onclick="closeDrawer()"></div>
+<aside class="drawer" id="drawer">
+  <nav>
+    <a href="#villas" onclick="closeDrawer()">Villas</a>
+    <a href="#story" onclick="closeDrawer()">The Hotel</a>
+    <a href="#dining" onclick="closeDrawer()">Dining</a>
+    <a href="#gallery" onclick="closeDrawer()">Gallery</a>
+    <a href="#reserve" onclick="closeDrawer()">Reserve</a>
+  </nav>
+</aside>
 
-<section class="hero">
-  <div class="hero-bg" id="heroBg"><img src="assets/aerial.jpg" alt="Aerial view of Clove Beach Wadduwa"></div>
-  <div class="wrap hero-in">
-    <span class="eyebrow center" data-rv="fade">Wadduwa · Sri Lanka</span>
-    <h1 data-rv="fade" style="transition-delay:.1s">A sanctuary<br>by the <em>ocean</em></h1>
-    <p class="hero-sub" data-rv="fade" style="transition-delay:.24s">Where Sri Lankan beauty meets quiet luxury. Private villas, timeless design and the endless rhythm of the sea.</p>
-    <div class="hero-cta" data-rv="fade" style="transition-delay:.36s">
-      <a href="https://bookings.clovehotels.com/clovebeachhotel/booking/hotels/clove-beach-hotel-wadduwa" target="_blank" rel="noopener" class="btn btn-solid"><span>Book your stay</span></a>
-      <a href="rooms.html" class="btn btn-light"><span>Explore the villas</span></a>
-    </div>
+<main>
+<!-- HERO. The Sunday shoot film replaces the default layer as a <video>; the still is complete on its own. -->
+<section class="hero" id="top">
+  <div class="hero-media" id="heroMedia">
+    <img class="hero-layer kb is-on" data-villa="default" src="assets/img/hero.jpg" alt="Clove Beach Wadduwa at golden hour" loading="eager">
+    <div class="hero-layer" data-villa="ocean" role="img" aria-label="Ocean Villa with private plunge pool"></div>
+    <div class="hero-layer" data-villa="garden1" role="img" aria-label="One-Bedroom Garden Villa in the gardens"></div>
+    <div class="hero-layer" data-villa="garden2" role="img" aria-label="Two-Bedroom Garden Villa with plunge pool"></div>
   </div>
-  <a href="#welcome" class="scrollcue"><span>Scroll</span><span class="ln"></span></a>
+  <div class="hero-ov"></div>
+  <div class="wrap">
+    <span class="eyebrow">Wadduwa, Sri Lanka</span>
+    <h1><span class="w"><span class="wi" style="--i:0">The</span></span> <span class="w"><span class="wi" style="--i:1">ocean,</span></span> <span class="w"><span class="wi" style="--i:2">kept</span></span> <span class="w"><span class="wi" style="--i:3"><em>private</em>.</span></span></h1>
+    <p>Twelve boutique villas on a quiet beach, forty-five minutes south of Colombo.</p>
+  </div>
 </section>
 
-<div class="trust">
+<!-- WHICH VILLA -->
+<section class="picker" id="villas">
   <div class="wrap">
-    <div class="tr" data-rv><div class="n">4<em>/5</em></div><div class="t">TripAdvisor rating</div></div>
-    <div class="tr" data-rv style="transition-delay:.06s"><div class="n">436<em>+</em></div><div class="t">Traveller reviews</div></div>
-    <div class="tr" data-rv style="transition-delay:.12s"><div class="n">3</div><div class="t">Villa styles</div></div>
-    <div class="tr" data-rv style="transition-delay:.18s"><div class="n">50<em>min</em></div><div class="t">From Colombo</div></div>
+    <div class="picker-head">
+      <span class="eyebrow">The Villas</span>
+      <h2>Which villa suits <em>your</em> stay?</h2>
+      <p>Choose a villa to make it yours. Twelve in all, in three ways to stay.</p>
+    </div>
+    <div class="vgrid" onmouseleave="resetVilla()">
+      <article class="vcard" data-rv data-v="ocean" tabindex="0" role="button" aria-label="Select the Ocean Villa" onmouseenter="previewVilla('ocean')" onmouseleave="resetVilla()" onfocus="previewVilla('ocean')" onblur="resetVilla()" onclick="selectVilla('ocean')" onkeypress="if(event.key==='Enter')selectVilla('ocean')">
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div class="ph" role="img" aria-label="Ocean Villa with private plunge pool"></div>
+        <div class="body"><h3>Ocean Villa</h3><p class="det">A marble Jacuzzi and a private plunge pool, steps from the sand.</p>
+        <span class="more">Select this villa<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </article>
+      <article class="vcard" data-rv style="transition-delay:.08s" data-v="garden1" tabindex="0" role="button" aria-label="Select the One-Bedroom Garden Villa" onmouseenter="previewVilla('garden1')" onmouseleave="resetVilla()" onfocus="previewVilla('garden1')" onblur="resetVilla()" onclick="selectVilla('garden1')" onkeypress="if(event.key==='Enter')selectVilla('garden1')">
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div class="ph" role="img" aria-label="One-Bedroom Garden Villa"></div>
+        <div class="body"><h3>One-Bedroom Garden Villa</h3><p class="det">A dedicated butler and bespoke dining by our Executive Chef.</p>
+        <span class="more">Select this villa<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </article>
+      <article class="vcard" data-rv style="transition-delay:.16s" data-v="garden2" tabindex="0" role="button" aria-label="Select the Two-Bedroom Garden Villa" onmouseenter="previewVilla('garden2')" onmouseleave="resetVilla()" onfocus="previewVilla('garden2')" onblur="resetVilla()" onclick="selectVilla('garden2')" onkeypress="if(event.key==='Enter')selectVilla('garden2')">
+        <div class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+        <div class="ph" role="img" aria-label="Two-Bedroom Garden Villa with plunge pool"></div>
+        <div class="body"><h3>Two-Bedroom Garden Villa</h3><p class="det">A private plunge pool and room for the whole family.</p>
+        <span class="more">Select this villa<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
+      </article>
+    </div>
+    <div class="pick-confirm" id="pickConfirm">
+      <span><b id="pickName">Ocean Villa</b> selected for your stay</span>
+      <a class="btn btn-primary" id="pickBtn" href="https://wa.me/94701200962?text=Hello%20Clove%20Beach%20Wadduwa%2C%20I%20would%20like%20to%20enquire%20about%20a%20villa." target="_blank" rel="noopener">Reserve this villa</a>
+    </div>
   </div>
+</section>
+
+<!-- REQUEST DATES (honest: it opens WhatsApp; works without JS via GET fallback) -->
+<div class="availwrap wrap">
+  <form class="availbar" action="https://wa.me/94701200962" method="get" target="_blank" onsubmit="return requestDates(event)">
+    <input type="hidden" name="text" value="Hello Clove Beach Wadduwa, I would like to request dates for a stay.">
+    <div class="af"><label for="avArrive">Arrive</label><input type="date" id="avArrive"></div>
+    <div class="af"><label for="avDepart">Depart</label><input type="date" id="avDepart"></div>
+    <div class="af"><label for="avGuests">Guests</label>
+      <select id="avGuests"><option>2 guests</option><option>1 guest</option><option>3 guests</option><option>4 guests</option><option>5+ guests</option></select></div>
+    <button class="btn btn-primary" type="submit">Request your dates</button>
+  </form>
+  <p class="avail-note">We reply personally on WhatsApp, usually within the hour.</p>
 </div>
 
-<section class="sect" id="welcome">
-  <div class="wrap split">
-    <div class="split-media" data-rv>
-      <div class="im"><img src="assets/arrival.jpg" alt="Clove Beach at dusk"></div>
-      <div class="badge"><div class="n">Clove</div><div class="t">Beach · Wadduwa</div></div>
-    </div>
-    <div class="split-text">
-      <span class="eyebrow" data-rv>Welcome to Clove</span>
-      <h2 data-rv style="transition-delay:.08s">A quiet sanctuary,<br>a stone's throw from the sea</h2>
-      <p data-rv style="transition-delay:.16s">Set along the golden shoreline of Wadduwa, Clove Beach is an intimate collection of private villas wrapped in tropical calm. Here, the days move gently, from tranquil swims to dishes that echo luxury.</p>
-      <p data-rv style="transition-delay:.22s">Every detail is designed for refined comfort. A refreshing pool, a serene spa, an ocean-facing bar and lounge spaces that make each moment indulgent, and effortless.</p>
-      <div class="feat-chips" data-rv style="transition-delay:.3s">
-        <span>Private Beachfront</span><span>Spa &amp; Wellness</span><span>All-day Dining</span><span>Weddings &amp; Events</span>
-      </div>
-    </div>
+<!-- THE WALK - signature scrubbed scene: arrival to sunset -->
+<section class="walk" id="walk" aria-label="The Clove day">
+  <div class="walk-row" data-walk>
+    <div><div class="walk-word">Arrive</div><div class="walk-rule"></div></div>
+    <p class="walk-copy">Through the gates, down the garden path, to the sound of the Indian Ocean.</p>
+  </div>
+  <div class="walk-row" data-walk>
+    <div><div class="walk-word">Unwind</div><div class="walk-rule"></div></div>
+    <p class="walk-copy">A private villa, a quiet pool, breakfast whenever you wake.</p>
+  </div>
+  <div class="walk-row" data-walk>
+    <div><div class="walk-word">Stay</div><div class="walk-rule"></div></div>
+    <p class="walk-copy">Long lunches, golden hours, dinner by the water as the sky turns.</p>
   </div>
 </section>
 
-<section class="sect cream">
-  <div class="wrap sect-head">
-    <span class="eyebrow center" data-rv="fade">The Villas</span>
-    <h2 data-rv="fade" style="transition-delay:.08s">Private villas, timeless design</h2>
-    <p data-rv="fade" style="transition-delay:.16s">Three ways to stay, each a world of its own. Ocean light, garden calm or your own private plunge.</p>
-  </div>
-  <div class="wrap room-grid">
-    <a href="rooms.html#ocean" class="room-card" data-rv="fade">
-      <div class="rm"><span class="tag">Ocean</span><img src="assets/villa-ocean.jpg" alt="Ocean Villa"></div>
-      <div class="rb"><h3>Ocean Villa</h3><div class="rp">from <b>$180</b> / night</div>
-      <p>Ocean-facing calm, steps from the sand, with the horizon as your first view each morning.</p>
-      <span class="arrow">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-    </a>
-    <a href="rooms.html#garden" class="room-card" data-rv="fade" style="transition-delay:.1s">
-      <div class="rm"><span class="tag">Garden</span><img src="assets/villa-garden.jpg" alt="Garden Villa"></div>
-      <div class="rb"><h3>Garden Villa</h3><div class="rp">from <b>$150</b> / night</div>
-      <p>A secluded retreat framed by frangipani and palm. Cool, quiet and utterly private.</p>
-      <span class="arrow">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-    </a>
-    <a href="rooms.html#pool" class="room-card" data-rv="fade" style="transition-delay:.2s">
-      <div class="rm"><span class="tag">Pool</span><img src="assets/pool.jpg" alt="Pool Villa"></div>
-      <div class="rb"><h3>Pool Villa</h3><div class="rp">from <b>$240</b> / night</div>
-      <p>An enclosed courtyard with a private pool and sun deck. The ultimate seclusion.</p>
-      <span class="arrow">Discover <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>
-    </a>
-  </div>
-</section>
-
-<section class="sect dark">
-  <div class="wrap sect-head">
-    <span class="eyebrow center" data-rv="fade">Dining</span>
-    <h2 data-rv="fade" style="transition-delay:.08s">Dishes that echo luxury</h2>
-    <p data-rv="fade" style="transition-delay:.16s">From private beach dinners to sun-drenched breakfasts, our chefs bring the finest of Sri Lankan and world cuisine to your table.</p>
-  </div>
-  <div class="wrap exp-grid">
-    <div class="exp" data-rv="fade"><img src="assets/dining.jpg" alt="Beachfront fine dining"><div class="exp-b"><div class="no">01</div><h4>Ocean-side table</h4><p>Private plated dinners set against the sound of the waves at dusk.</p></div></div>
-    <div class="exp" data-rv="fade" style="transition-delay:.1s"><img src="assets/bar.jpg" alt="Cocktail bar"><div class="exp-b"><div class="no">02</div><h4>The garden bar</h4><p>Signature cocktails and fresh island flavours beneath the frangipani.</p></div></div>
-    <div class="exp" data-rv="fade" style="transition-delay:.2s"><img src="assets/dining-2.jpg" alt="All-day dining"><div class="exp-b"><div class="no">03</div><h4>All-day dining</h4><p>From tropical breakfasts to slow, candle-lit evenings by the sea.</p></div></div>
-  </div>
-  <div class="wrap" style="text-align:center;margin-top:48px" data-rv="fade">
-    <a href="dining.html" class="btn btn-light"><span>Explore dining</span></a>
-  </div>
-</section>
-
-<section class="para">
-  <div class="para-bg" data-para><img src="assets/pool.jpg" alt="Pool at Clove Beach"></div>
-  <div class="wrap para-in">
-    <span class="eyebrow" data-rv>Facilities</span>
-    <h2 data-rv style="transition-delay:.08s">Every moment,<br>designed for refined comfort</h2>
-    <p data-rv style="transition-delay:.16s">From tranquil swims to sunset cocktails, the world-class facilities of Clove Beach ensure your stay is both indulgent and effortless.</p>
-    <ul class="fac-list" data-rv style="transition-delay:.24s">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg>Freshwater pool</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg>Spa &amp; wellness</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg>Ocean-facing bar</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg>All-day dining</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg>Lounge spaces</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4 10-10"/></svg>Beachfront gardens</li>
-    </ul>
-  </div>
-</section>
-
-<section class="sect">
-  <div class="wrap sect-head">
-    <span class="eyebrow center" data-rv="fade">What guests love</span>
-    <h2 data-rv="fade" style="transition-delay:.08s">Rated 4/5 by 436 travellers</h2>
-    <p data-rv="fade" style="transition-delay:.16s">The themes that come up again and again across our TripAdvisor reviews.</p>
-  </div>
-  <div class="wrap quotes">
-    <div class="quote" data-rv="fade"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg></div><p>The warmth of the team, remembered by name in review after review.</p><div class="who">Staff &amp; service · review theme</div></div>
-    <div class="quote" data-rv="fade" style="transition-delay:.1s"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg></div><p>Villas praised as spacious, private and beautifully kept.</p><div class="who">The villas · review theme</div></div>
-    <div class="quote" data-rv="fade" style="transition-delay:.2s"><div class="stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.6 1.3 6.6L12 16.9 6.1 20.2l1.3-6.6L2.5 9l6.6-.8z"/></svg></div><p>Fresh seafood and long beachfront dinners guests plan their days around.</p><div class="who">Dining · review theme</div></div>
-  </div>
-</section>
-
-<section class="sect cream" style="padding-top:0">
-  <div class="wrap sect-head" style="padding-top:0">
-    <span class="eyebrow center" data-rv="fade">Gallery</span>
-    <h2 data-rv="fade" style="transition-delay:.08s">#CloveBeach</h2>
-  </div>
-  <div class="wrap gal-grid" data-rv="fade" style="grid-auto-rows:180px">
-    <div class="gal-item g-tall" onclick="openLb(0)"><img src="assets/aerial.jpg" alt="Clove Beach aerial" loading="lazy"></div>
-    <div class="gal-item" onclick="openLb(1)"><img src="assets/pool.jpg" alt="Pool" loading="lazy"></div>
-    <div class="gal-item" onclick="openLb(2)"><img src="assets/villa-ocean.jpg" alt="Ocean Villa" loading="lazy"></div>
-    <div class="gal-item g-wide" onclick="openLb(3)"><img src="assets/dining.jpg" alt="Dining" loading="lazy"></div>
-    <div class="gal-item" onclick="openLb(4)"><img src="assets/spa.jpg" alt="Spa" loading="lazy"></div>
-    <div class="gal-item" onclick="openLb(5)"><img src="assets/bar.jpg" alt="Bar" loading="lazy"></div>
-  </div>
-  <div class="wrap" style="text-align:center;margin-top:44px" data-rv="fade">
-    <a href="gallery.html" class="btn"><span>View the full gallery</span></a>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="cta-bg" data-para><img src="assets/villa-ocean.jpg" alt=""></div>
-  <div class="wrap cta-in">
-    <span class="eyebrow center" data-rv="fade">Your escape awaits</span>
-    <h2 data-rv="fade" style="transition-delay:.08s">Reserve your sanctuary</h2>
-    <p data-rv="fade" style="transition-delay:.16s">Book online in minutes, or speak with our team and let us design a stay that stays with you.</p>
-    <div class="hero-cta" data-rv="fade" style="transition-delay:.24s">
-      <a href="https://bookings.clovehotels.com/clovebeachhotel/booking/hotels/clove-beach-hotel-wadduwa" target="_blank" rel="noopener" class="btn btn-solid"><span>Book your stay</span></a>
-      <a href="https://wa.me/94701200962?text=Hello%20Clove%20Beach%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener" class="btn btn-light"><span>Enquire on WhatsApp</span></a>
-    </div>
-  </div>
-</section>
-
-
-<footer>
+<!-- STORY collage -->
+<section class="section storyc" id="story" style="padding-top:0">
   <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <img src="assets/logo-white.png" alt="Clove Beach Wadduwa">
-        <p>A private beachfront sanctuary of quiet luxury on the golden shores of Wadduwa, Sri Lanka.</p>
-        <div class="foot-soc">
-          <a href="https://www.instagram.com/clovebeachwadduwa/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></svg></a>
-          <a href="https://www.facebook.com/p/Clove-Beach-Wadduwa-61580708886243/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-1 .5-1.5 1.7-1.5H17V2.5h-2.5C11.7 2.5 10 4.2 10 7v2H7.5v3.2H10V21.5h4v-9.3h2.7l.5-3.2H14z"/></svg></a>
-          <a href="https://wa.me/94701200962" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4.9A9.8 9.8 0 0 0 12 2C6.6 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4a9.9 9.9 0 0 0 4.7 1.2c5.5 0 9.9-4.5 9.9-9.9 0-2.6-1-5.1-2.9-7zM12 20.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3a8.2 8.2 0 1 1 7 3.9z"/></svg></a>
+    <div class="inner">
+      <div data-rv>
+        <span class="eyebrow">Boutique, by design</span>
+        <h2>Twelve villas. One private beach.</h2>
+        <p>No crowds, no queues, no compromise. Just a quiet stretch of Sri Lanka's west coast, and a team that takes care of everything from here.</p>
+        <div class="stats">
+          <div class="stat"><b>12</b><span>Private villas</span></div>
+          <div class="stat"><b>45</b><span>Min from Colombo</span></div>
+          <div class="stat"><b>1</b><span>Private beach</span></div>
         </div>
       </div>
-      <div class="foot-col"><h4>Discover</h4><a href="rooms.html">The Villas</a><a href="dining.html">Dining</a><a href="gallery.html">Gallery</a><a href="about.html">About Clove</a></div>
-      <div class="foot-col"><h4>Plan</h4><a href="https://bookings.clovehotels.com/clovebeachhotel/booking/hotels/clove-beach-hotel-wadduwa" target="_blank" rel="noopener">Book online</a><a href="contact.html">Contact us</a><a href="about.html#location">Getting here</a><a href="https://wa.me/94701200962?text=Hello%20Clove%20Beach%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener">WhatsApp us</a></div>
-      <div class="foot-col foot-contact"><h4>Contact</h4>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="2.5"/></svg>Beachfront, Wadduwa, Sri Lanka</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16.5v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 3.2 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L9.1 9.9a16 16 0 0 0 6 6l1.3-1.35a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7a2 2 0 0 1 1.7 2z"/></svg>+94 70 1 200 962</div>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>reserve@clovehotels.com</div>
+      <div class="cluster">
+        <img class="c1" data-rv src="assets/img/story.jpg" alt="Clove Beach Wadduwa from above">
+        <img class="c2 mask" data-rv style="transition-delay:.12s" src="assets/img/story-pool.jpg" alt="A private plunge pool" loading="lazy">
+        <img class="c3 mask" data-rv style="transition-delay:.22s" src="assets/img/story-beach.jpg" alt="The beach at Clove" loading="lazy">
       </div>
     </div>
-    <div class="foot-bot">
-      <span>© 2026 Clove Beach Wadduwa. All rights reserved.</span>
-      <span>Site by Business Booster</span>
+  </div>
+</section>
+
+<!-- THE STAY -->
+<section class="section exp" id="experience" style="background:var(--surface);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sect-head" data-rv><span class="eyebrow">The Stay</span><h2>Everything, taken <em>care</em> of.</h2></div>
+    <div class="exp-grid">
+      <div class="exp-item" data-rv>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 18c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><path d="M2 13c2-1.5 4-1.5 6 0s4 1.5 6 0 4-1.5 6 0"/><circle cx="17" cy="6" r="2.4"/></svg></div>
+        <h3>A private stretch of beach</h3><p>Your own quiet shore, without the crowds.</p>
+      </div>
+      <div class="exp-item" data-rv style="transition-delay:.08s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3v8a3 3 0 0 0 6 0V3"/><path d="M9 3v18"/><path d="M17 3c-1.5 1-2 3-2 5s.5 3 2 3v10"/></svg></div>
+        <h3>The Clove Restaurant &amp; Spice Bar</h3><p>Fresh from the sea, served by the ocean.</p>
+      </div>
+      <div class="exp-item" data-rv style="transition-delay:.16s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c4-3 7-7 7-11a7 7 0 0 0-14 0c0 4 3 8 7 11Z"/><path d="M12 13c2.2 0 3.5-1.6 3.5-3.6"/></svg></div>
+        <h3>Spa, on request</h3><p>Treatments arranged for you, in your own time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DINING -->
+<section class="section dining" id="dining">
+  <div class="wrap">
+    <div class="inner">
+      <div class="media"><img class="mask" data-rv src="assets/img/dining.jpg" alt="Beachfront dining at Clove Beach Wadduwa" loading="lazy"></div>
+      <div data-rv style="transition-delay:.08s">
+        <span class="eyebrow">Dining</span>
+        <h2>From the sea, to the <em>sand</em>.</h2>
+        <p>The Clove Restaurant serves the day's catch and slow evenings by the water. At The Spice Bar, cocktails arrive as the sun goes down.</p>
+        <a class="btn btn-ink" href="https://wa.me/94701200962?text=Hello%20Clove%20Beach%20Wadduwa%2C%20I%20would%20like%20to%20reserve%20a%20table." target="_blank" rel="noopener">Reserve a table</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section gallery-sec" id="gallery">
+  <div class="wrap">
+    <div class="sect-head" data-rv><span class="eyebrow">The Setting</span><h2>Life at Clove.</h2><p>Quiet mornings, long lunches, and the ocean a few steps away.</p></div>
+    <div class="mosaic">
+      <figure class="big"><img class="mask" data-rv src="assets/img/life-dusk.jpg" alt="Clove Beach Wadduwa at dusk" loading="lazy"></figure>
+      <figure><img class="mask" data-rv style="transition-delay:.1s" src="assets/img/life-beach.jpg" alt="The beach at Clove" loading="lazy"></figure>
+      <figure><img class="mask" data-rv style="transition-delay:.18s" src="assets/img/life-pool.jpg" alt="By the pool" loading="lazy"></figure>
+      <figure><img class="mask" data-rv style="transition-delay:.26s" src="assets/img/life-garden.jpg" alt="A quiet moment in the gardens" loading="lazy"></figure>
+      <figure><img class="mask" data-rv style="transition-delay:.34s" src="assets/img/life-sunset.jpg" alt="Sunset over the ocean at Clove" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- WHY BOOK DIRECT -->
+<section class="section exp" id="direct" style="background:var(--bg);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="sect-head" data-rv><span class="eyebrow">Book Direct</span><h2>Always better, booked with us.</h2><p>Three good reasons to skip the travel sites and come to us directly.</p></div>
+    <div class="exp-grid">
+      <div class="exp-item" data-rv>
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Our best rate, always</h3><p>Book with us and you will not find the villa for less anywhere else.</p>
+      </div>
+      <div class="exp-item" data-rv style="transition-delay:.08s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12v7a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-7"/><path d="M2 7h20v5H2zM12 22V7M12 7S12 3 9 3a2.5 2.5 0 0 0 0 5M12 7s0-4 3-4a2.5 2.5 0 0 1 0 5"/></svg></div>
+        <h3>A welcome that is ready</h3><p>Your villa prepared and your arrival arranged before you land.</p>
+      </div>
+      <div class="exp-item" data-rv style="transition-delay:.16s">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L3 21l1.1-3.3A8.4 8.4 0 1 1 21 11.5Z"/></svg></div>
+        <h3>Speak to a real person</h3><p>A message on WhatsApp reaches our team, not a call centre.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="reserve">
+  <img class="cta-bg" src="assets/img/cta.jpg" alt="" loading="lazy">
+  <div class="cta-scrim"></div>
+  <div class="wrap">
+    <span class="eyebrow">Reserve</span>
+    <h2>Reserve directly with us.</h2>
+    <p>Tell us your dates and your villa. We will take care of everything from here.</p>
+    <div class="cta-cta">
+      <a class="btn btn-primary" id="ctaBtn" href="https://wa.me/94701200962?text=Hello%20Clove%20Beach%20Wadduwa%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener">Enquire on WhatsApp</a>
+      <span class="tel">or call <a href="tel:+94701200962" style="text-decoration:underline">+94 70 120 0962</a></span>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand"><span class="b1">Clove</span><span class="b2">BEACH · WADDUWA</span></div>
+        <p class="tag">A twelve-villa boutique beachfront hotel on Sri Lanka's west coast, forty-five minutes south of Colombo.</p>
+      </div>
+      <div>
+        <h4>Stay</h4>
+        <a href="#villas">The Villas</a><a href="#dining">Dining</a><a href="#gallery">Gallery</a><a href="#reserve">Reserve</a>
+      </div>
+      <div>
+        <h4>Find us</h4>
+        <a href="tel:+94701200962">+94 70 120 0962</a>
+        <a href="mailto:stay@clovehotels.com">stay@clovehotels.com</a>
+        <a href="https://maps.google.com/?q=Clove+Beach+Wadduwa" target="_blank" rel="noopener">Wadduwa, Western Province · Map</a>
+        <a href="https://instagram.com/clovebeachwadduwa" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+    <div class="bar">
+      <span>&copy; 2026 Clove Beach Wadduwa. A MAC Hotels and Villas property.</span>
+      <span>45 minutes from Colombo, on the Galle Road</span>
     </div>
   </div>
 </footer>
-<a class="wa-fab" href="https://wa.me/94701200962?text=Hello%20Clove%20Beach%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 4.9A9.8 9.8 0 0 0 12 2C6.6 2 2.1 6.5 2.1 11.9c0 1.8.5 3.5 1.3 5L2 22l5.2-1.4a9.9 9.9 0 0 0 4.7 1.2h.004c5.5 0 9.9-4.5 9.9-9.9 0-2.6-1-5.1-2.9-7zM12 20.2h-.003a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.1.81.83-3.02-.2-.31a8.2 8.2 0 1 1 7.15 4z"/></svg></a>
-<div class="mscrim" id="mscrim" onclick="closeMenu()"></div>
-<aside class="mmenu" id="mmenu">
-  <button class="mx" onclick="closeMenu()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  <img src="assets/logo-white.png" alt="Clove Beach">
-  <a href="index.html" onclick="closeMenu()">Home</a>
-  <a href="rooms.html" onclick="closeMenu()">Villas</a>
-  <a href="dining.html" onclick="closeMenu()">Dining</a>
-  <a href="gallery.html" onclick="closeMenu()">Gallery</a>
-  <a href="about.html" onclick="closeMenu()">About</a>
-  <a href="contact.html" onclick="closeMenu()">Contact</a>
-  <a href="https://bookings.clovehotels.com/clovebeachhotel/booking/hotels/clove-beach-hotel-wadduwa" target="_blank" rel="noopener" class="btn btn-solid" onclick="closeMenu()"><span>Book now</span></a>
-</aside>
-<div class="lb" id="lb">
-  <button class="x" onclick="closeLb()" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-  <button class="nav-b prev" onclick="lbStep(-1)" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 6l-6 6 6 6"/></svg></button>
-  <img id="lbImg" src="" alt="">
-  <button class="nav-b next" onclick="lbStep(1)" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 6l6 6-6 6"/></svg></button>
+
+<!-- sticky mobile booking bar -->
+<div class="mbar" id="mbar">
+  <a class="btn btn-ink" href="#reserve">Reserve</a>
+  <a class="btn btn-primary" href="https://wa.me/94701200962?text=Hello%20Clove%20Beach%20Wadduwa%2C%20I%20would%20like%20to%20enquire%20about%20a%20stay." target="_blank" rel="noopener">WhatsApp</a>
 </div>
+
 <script>
-const GAL=[{src:'assets/aerial.jpg'},{src:'assets/pool.jpg'},{src:'assets/villa-ocean.jpg'},{src:'assets/dining.jpg'},{src:'assets/spa.jpg'},{src:'assets/bar.jpg'}];
+const nav=document.getElementById('nav'),drawer=document.getElementById('drawer'),scrim=document.getElementById('scrim'),mbar=document.getElementById('mbar'),heroMedia=document.getElementById('heroMedia');
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduce)document.documentElement.classList.add('reveal-on','rv');
+const rv=document.querySelectorAll('[data-rv]');
+const walkRows=document.querySelectorAll('[data-walk]');
+function showReveals(){const vh=innerHeight;rv.forEach(el=>{if(el.getBoundingClientRect().top<vh-70)el.classList.add('in');});}
+function scrubWalk(){const vh=innerHeight;walkRows.forEach(r=>{const t=r.getBoundingClientRect().top;const p=Math.max(0,Math.min(1,(vh*.8-t)/(vh*.42)));r.style.setProperty('--p',p.toFixed(3));});}
+function parallax(){if(heroMedia)heroMedia.style.transform='translateY('+Math.min(scrollY*.26,innerHeight*.35).toFixed(1)+'px)';}
+function onScroll(){
+  nav.classList.toggle('stick',scrollY>40);
+  if(mbar)mbar.classList.toggle('show',scrollY>innerHeight*0.7);
+  showReveals();
+  if(document.documentElement.classList.contains('rv')){scrubWalk();parallax();}
+}
+addEventListener('scroll',()=>requestAnimationFrame(onScroll),{passive:true});
+onScroll();setTimeout(showReveals,500);
+function openDrawer(){drawer.classList.add('open');scrim.classList.add('open');}
+function closeDrawer(){drawer.classList.remove('open');scrim.classList.remove('open');}
+
+// hero crossfade + click-to-lock villa selection
+const heroLayers={};document.querySelectorAll('.hero-layer').forEach(l=>heroLayers[l.dataset.villa]=l);
+const VNAME={ocean:'Ocean Villa',garden1:'One-Bedroom Garden Villa',garden2:'Two-Bedroom Garden Villa'};
+let locked=null;
+function previewVilla(v){for(const k in heroLayers)heroLayers[k].classList.toggle('is-on',k===v);}
+function resetVilla(){previewVilla(locked||'default');}
+function waLink(msg){return 'https://wa.me/94701200962?text='+encodeURIComponent(msg);}
+function selectVilla(v){
+  locked=(locked===v)?null:v;
+  document.querySelectorAll('.vcard').forEach(c=>c.classList.toggle('selected',c.dataset.v===locked));
+  const pc=document.getElementById('pickConfirm'),cta=document.getElementById('ctaBtn');
+  if(locked){
+    document.getElementById('pickName').textContent=VNAME[locked];
+    const link=waLink('Hello Clove Beach Wadduwa, I would like to enquire about the '+VNAME[locked]+'.');
+    document.getElementById('pickBtn').href=link;
+    if(cta){cta.href=link;cta.textContent='Enquire about the '+VNAME[locked];}
+    pc.classList.add('show');
+  }else{
+    pc.classList.remove('show');
+    if(cta){cta.href=waLink('Hello Clove Beach Wadduwa, I would like to enquire about a stay.');cta.textContent='Enquire on WhatsApp';}
+  }
+  previewVilla(locked||'default');
+}
+function requestDates(e){
+  e.preventDefault();
+  const a=document.getElementById('avArrive').value,d=document.getElementById('avDepart').value,g=document.getElementById('avGuests').value;
+  let m='Hello Clove Beach Wadduwa, I would like to request dates';
+  if(locked)m+=' for the '+VNAME[locked];
+  if(a)m+=', arriving '+a;
+  if(d)m+=', departing '+d;
+  m+=', for '+g+'.';
+  window.open(waLink(m),'_blank','noopener');
+  return false;
+}
 </script>
-<script src="site.js"></script>
 </body>
 </html>
